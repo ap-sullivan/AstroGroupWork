@@ -11,6 +11,6 @@ Most of the information here is drawn from the [Svelte Website](https://svelte.d
 
 ![Slide1](/src/assets/page2/images/1.png)
 
-Presentation front page with presenter names and appropriate theme.
+Slides for tutorial
 
 ![Slide2](/src/assets/page2/images/2.png)
