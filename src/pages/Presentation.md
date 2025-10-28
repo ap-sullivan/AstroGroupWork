@@ -14,7 +14,7 @@ title: "Astro Presentation"
 
 <section>
 
-![Slide1](./images/presentation/1.png)
+![Slide1](/images/presentation/1.png)
 
 Welcome slide.
 
@@ -23,7 +23,7 @@ Welcome slide.
 
 <section>
 
-![Slide2](./images/presentation/2.png)
+![Slide2](/images/presentation/2.png)
 
 Introduction and background.
 
@@ -31,7 +31,7 @@ Introduction and background.
 
 <section>
 
-![Slide3](./images/presentation/3.png)
+![Slide3](/images/presentation/3.png)
 
 At its core, Astro is a modern web framework specifically designed for building fast, content-focused websites. It’s a relatively new player in the field, having first been released in 2022.
 
