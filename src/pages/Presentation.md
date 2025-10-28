@@ -14,7 +14,7 @@ title: "Astro Presentation"
 
 <section>
 
-![Slide1](/src/assets/page1/images/1.PNG)
+![Slide1](/images/presentation/1.png)
 
 Welcome slide.
 
@@ -23,7 +23,7 @@ Welcome slide.
 
 <section>
 
-![Slide2](/src/assets/page1/images/2.PNG)
+![Slide2](/images/presentation/2.png)
 
 Introduction and background.
 
@@ -31,7 +31,7 @@ Introduction and background.
 
 <section>
 
-![Slide3](/src/assets/page1/images/3.PNG)
+![Slide3](/images/presentation/3.png)
 
 At its core, Astro is a modern web framework specifically designed for building fast, content-focused websites. It’s a relatively new player in the field, having first been released in 2022.
 
@@ -43,7 +43,7 @@ This process is known as partial hydration, and it feels like a bit of a game-ch
 
 <section>
 
-![Slide4](/src/assets/page1/images/4.PNG)
+![Slide4](/images/presentation/4.png)
 
 Why choose Astro over something more established? To understand this, let's look at a traditional Single Page Application, or SPA, like one built with React. In a typical SPA, the entire page runs as a single, large JavaScript application. This means the user's browser must download, parse, and execute a large JavaScript bundle just to see the content, which can be slow.
 
@@ -55,7 +55,7 @@ This performance boost has a direct impact on Search Engine Optimization, or SEO
 
 <section>
 
-![Slide5](/src/assets/page1/images/5.PNG)
+![Slide5](/images/presentation/5.png)
 
 
 One of Astro's most powerful and unique features is that it is 'Framework Agnostic' as Astro lets you embed interactive components from other JavaScript frameworks directly into your pages.
@@ -66,7 +66,7 @@ It also works with all the major CSS frameworks such as Tailwind and bootstrap a
 
 <section>
 
-![Slide6](/src/assets/page1/images/6.PNG)
+![Slide6](/images/presentation/6.png)
 
 
 Astro’s magic lies in a concept called the Island Architecture. Imagine a webpage is a large sea of static, non-interactive HTML. This 'sea' is all your text, images, and basic layout and it can be rendered on the server and sent to the browser incredibly quickly because it's just simple HTML and CSS. Scattered within that are your interactive UI components like image carousels,  search bars, or a 'add to cart' button. These are your 'islands'.
@@ -81,7 +81,7 @@ This approach is the key to Astro's philosophy of sending as little JavaScript a
 
 <section>
 
-  ![Slide7](/src/assets/page1/images/7.PNG)
+  ![Slide7](/images/presentation/7.png)
 
   This flowchart provides a visualisation of the entire page load process showing how Astro delivers its speed of load.
   
@@ -98,7 +98,7 @@ This approach is the key to Astro's philosophy of sending as little JavaScript a
 
 <section>
 
-  ![Slide8](/src/assets/page1/images/8.PNG)
+  ![Slide8](/images/presentation/8.png)
  
   
   Traditional frameworks are fundamentally client-side heavy. Entire pages often require a full JavaScript bundle to render in the user's browser, which can significantly increase initial load times. Astro, by contrast, does this work on the server, sending pre-built HTML for maximum speed.
@@ -115,7 +115,7 @@ This approach is the key to Astro's philosophy of sending as little JavaScript a
 
 <section>
 
-  ![Slide9](/src/assets/page1/images/9.PNG)
+  ![Slide9](/images/presentation/9.png)
 
   Of course, no technology perfect and these of the challenges of working with Astro.
   
@@ -133,13 +133,13 @@ This approach is the key to Astro's philosophy of sending as little JavaScript a
 
 <section>
 
-  ![Slide10](/src/assets/page1/images/10.PNG)
+  ![Slide10](/images/presentation/10.png)
 
 </section>
 
 <section>
 
-  ![Slide11](/src/assets/page1/images/11.PNG)
+  ![Slide11](/images/presentation/11.png)
 
   Although Astro is a new framework that was only released in 2022, its adoption has been pretty rapid. This graph, using data from BuiltWith.com, shows the number of websites across the entire internet that use Astro.
   
@@ -151,7 +151,7 @@ This approach is the key to Astro's philosophy of sending as little JavaScript a
 
 <section>
 
-  ![Slide12](/src/assets/page1/images/12.PNG)
+  ![Slide12](/images/presentation/12.png)
 
   This chart comes from a 2024 Netlify developer survey, which highlights the change in framework usage between 2023 and 2024.
   
@@ -161,7 +161,7 @@ This approach is the key to Astro's philosophy of sending as little JavaScript a
 
 <section>
 
-  ![Slide13](/src/assets/page1/images/13.PNG)
+  ![Slide13](/images/presentation/13.png)
 
   Astro really excels at content-heavy sites where performance is critical. This includes blogs, marketing pages, documentation sites, personal portfolios, and e-commerce front-ends.
   
@@ -173,7 +173,7 @@ This approach is the key to Astro's philosophy of sending as little JavaScript a
 
 <section>
 
-  ![Slide14](/src/assets/page1/images/14.PNG)
+  ![Slide14](/images/presentation/14.png)
 
 Here are just a few of the major companies and brands that use Astro for their websites. 
 
@@ -186,7 +186,7 @@ And major tech companies like Cloudflare, Firebase who will have lots of documen
 
 <section>
 
-  ![Slide15](/src/assets/page1/images/15.PNG)
+  ![Slide15](/images/presentation/15.png)
 
   To make getting started with the framework even easier, Astro has a library of pre-built templates and themes.
   
@@ -200,50 +200,50 @@ And major tech companies like Cloudflare, Firebase who will have lots of documen
 
 <section>
 
-  ![Slide16](/src/assets/page1/images/16.PNG)
+  ![Slide16](/images/presentation/16.png)
 </section>
 
 <section>
 
-  ![Slide17](/src/assets/page1/images/17.PNG)
+  ![Slide17](/images/presentation/17.png)
 </section>
 
 <section>
 
-  ![Slide18](/src/assets/page1/images/18.PNG)
+  ![Slide18](/images/presentation/18.png)
 </section>
 
 <section>
 
-  ![Slide19](/src/assets/page1/images/19.PNG)
+  ![Slide19](/images/presentation/19.png)
 </section>
 
 <section>
 
-  ![Slide20](/src/assets/page1/images/20.PNG)
+  ![Slide20](/images/presentation/20.png)
 </section>
 
 <section>
 
-  ![Slide21](/src/assets/page1/images/21.PNG)
+  ![Slide21](/images/presentation/21.png)
 </section>
 
 <section>
 
-  ![Slide22](/src/assets/page1/images/22.PNG)
+  ![Slide22](/images/presentation/22.png)
 </section>
 
 <section>
 
-  ![Slide23](/src/assets/page1/images/23.PNG)
+  ![Slide23](/images/presentation/23.png)
 </section>
 
 <section>
 
-  ![Slide24](/src/assets/page1/images/24.PNG)
+  ![Slide24](/images/presentation/24.png)
 </section>
 
 <section>
 
-  ![Slide25](/src/assets/page1/images/25.PNG)
+  ![Slide25](/images/presentation/25.png)
 </section>
