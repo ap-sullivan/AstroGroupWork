@@ -5,12 +5,16 @@ const { title } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+
+      <link rel="icon" href="/favicon.ico" />
+
     <title>{title}</title>
     <style>
       body { font-family: sans-serif; margin: 0; }
       nav {
+        font-size: 1.3rem;
         background: #222;
-        padding: 10px;
+        padding: 1.8rem;
         position: sticky;
         top: 0;
       }
@@ -22,7 +26,35 @@ const { title } = Astro.props;
       nav a:hover {
         text-decoration: underline;
       }
+
+
       main { padding: 2rem; }
+
+    :global(.content img) {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+
+
+  :global(.content h2) {
+    margin-top: 2rem;
+    color: #333;
+  }
+
+  :global(.content p) {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  :global(section) {
+    margin-bottom: 5rem;
+
+  }
     </style>
   </head>
   <body>
@@ -31,8 +63,8 @@ const { title } = Astro.props;
       <a href="/Presentation">Presentation</a>
       <a href="/Tutorial">Tutorial</a>
     </nav>
-    <main>
-      <slot /> <!-- This is where each page's content goes -->
+    <main class="content">
+      <slot /> 
     </main>
   </body>
 </html>
