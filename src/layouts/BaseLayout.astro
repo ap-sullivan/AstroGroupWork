@@ -10,7 +10,12 @@ const { title } = Astro.props;
 
     <title>{title}</title>
     <style>
-      body { font-family: sans-serif; margin: 0; }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0; 
+        background-color: azure;
+      
+      }
       nav {
         font-size: 1.3rem;
         background: #222;
@@ -28,7 +33,7 @@ const { title } = Astro.props;
       }
 
 
-      main { padding: 2rem; }
+      main { padding: 6rem; }
 
     :global(.content img) {
     display: block;
@@ -46,9 +51,10 @@ const { title } = Astro.props;
   }
 
   :global(.content p) {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     line-height: 1.6;
     margin-bottom: 1rem;
+    padding: 0 1rem;
   }
 
   :global(section) {

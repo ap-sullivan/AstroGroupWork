@@ -201,49 +201,140 @@ And major tech companies like Cloudflare, Firebase who will have lots of documen
 <section>
 
   ![Slide16](/AstroGroupWork/images/presentation/16.png)
+
+  So how does Astro fit in with other web technologies?
+
 </section>
 
 <section>
 
   ![Slide17](/AstroGroupWork/images/presentation/17.png)
+
+  Astro slots in well in the modern web ecosystem with its flexibility and compatibility with so many new and old technologies.
+  
+  You can use components from React, Vue, Svelte, and others seamlessly within the same project
+  
+  Since Astro runs on Node.js for its backend features, it can connect to any database that works with this technology. This includes traditional SQL databases like MySQL or PostgreSQL and NoSQL databases like MongoDB or Firebase,  and Cloud-hosted databases such as Firebase and Supabase.
+  
+  Astro is built to consume data from anywhere so working with API’s is seamles. It works with both REST and GraphQL APIs and can fetch data at different times: during the site build at deployment for static content, on the server for dynamic pages, or on the client-side within interactive islands.
+  
 </section>
 
 <section>
 
   ![Slide18](/AstroGroupWork/images/presentation/18.png)
+
+  It integrates smoothly with popular headless content management systems like Contentful, Sanity, and Strapi which let you store text, images, and other content online and then fetch it via an API, this technique would be used heavily for e-commerce front ends or documentation sites which Astro works best for. 
+  
+  It integrates perfectly with styling tools like Tailwind, Sass, and PostCSS, and it supports TypeScript out of the box.
+  
+  Finally Astro can be deployed in many different environments, depending on the project’s needs:
+  
+  Static CDN: If your site is static (no backend), you can host it directly on a CDN like GitHub Pages or Cloudflare Pages for ultra-fast performance.
+  
+  Serverless platforms: For dynamic apps or APIs, you can deploy on Vercel, Netlify, or Render — they automatically scale and manage servers for you.
+  
+  You can also run Astro on your own Node.js server.
+  
+  
+  Essentially, you can use Astro to build anything from a simple static site to a full-stack web app with live data.
+  
 </section>
 
 <section>
 
   ![Slide19](/AstroGroupWork/images/presentation/19.png)
+
+  Leading on from the last slide, while Astro excels at static sites, it's also a capable full-stack framework as evidenced by the number of technologies you can work with. 
+  
+  The front-end would be handled by its static-site generation (SSG) capabilities and the concept of hydrating JavaScript 'islands.
+  
+  On the back-end, Astro lets you create server-side API routes directly inside your project, inside a folder like /src/pages/api/ similar to how express.js or Nextjs apps work.
+  
+  That means you can handle things like fetching data, posting forms, or even authentication — without needing a separate Express or Node.js app.
+  
+  You can also integrate any kind of database supported by Node.js — whether it’s SQL, NoSQL, or a cloud-based service like Supabase or Firebase.
+  
+  For security, Astro supports popular authentication libraries like JWT or OAuth — which means it’s capable of handling login systems and protected routes.
+  
+  As a framework Astro gives you the best of both worlds — static speed on the front end, with dynamic power and flexibility on the back end.
+  
 </section>
 
 <section>
 
   ![Slide20](/AstroGroupWork/images/presentation/20.png)
+
+  Lets look at how to set Astro up and an example of how easy it is to incorporate react components or "islands" into a Astro project.
 </section>
 
 <section>
 
   ![Slide21](/AstroGroupWork/images/presentation/21.png)
+
+  Getting started with Astro very simple and takes only a few minutes.
+  
+  The most direct way is a local setup. As long as you have Node.js installed, you can just open your command line and run npm create astro@latest. The installer will then guide you through a few simple prompts, like naming your project and whether to install dependencies or initialize a Git repository. Once it’s finished, you just cd into the new folder and run npm run dev to start a local development server with live updates.
+  
+  Of course, if you prefer a containerised approach, you can also set up your project using Docker by installing the package within a Node.js container.
+  
+  To enhance the development experience there is an official plugin for VS Code. This is incredibly useful, providing features like syntax highlighting, IntelliSense, code formatting, and much more, which generally makes life a lot easier when writing Astro code.
+  
 </section>
 
 <section>
 
   ![Slide22](/AstroGroupWork/images/presentation/22.png)
+
+  The next two slides show a practical example of how Astro works in conjunction with React.
+  
+  Adding React to an existing Astro project is easy, you just run a single command in your terminal “npx astro add react”.
+  
+  As you can see from the command line output, this command does two main things:
+  
+  1.	First, it installs all the necessary dependencies, like the Astro React integration package and the React libraries themselves.
+  
+  2.	Second, it automatically updates your Astro configuration file to import and use the new React integration.
+  
 </section>
 
 <section>
 
   ![Slide23](/AstroGroupWork/images/presentation/23.png)
+
+  Once React is added, you can start using components. This slide shows the two key files.
+  
+  On the left, we have a standard React component called UserList.jsx. It uses familiar React hooks like useState to fetch data from a local JSON file and manage a loading state. 
+  
+  On the right is our index.astro page. At the top, we are importing the UserList component just like you would in a regular React project. This is where Astro comes in as when we use the component in our HTML, we add the directive <strong>client:load</strong>. 
+  
+  This is a command that tells Astro, 'This component is an interactive island.'  And  should not be rendered to static HTML at build time; instead, its JavaScript should be sent to the browser and rendered only when the page loads. This is how we create our islands of interactivity.
+  
 </section>
 
 <section>
 
   ![Slide24](/AstroGroupWork/images/presentation/24.png)
+
+  And here is the final result. On the top left, you can see the fully rendered page in the browser. The React component has successfully fetched the data from the JSON file and mapped it to a list of team members, just as it would in any normal react project.
+  
+  The interesting part is what's happening in the browser. If you look at the screenshot of the browser's developer tools, you'll notice there isn't one large JavaScript bundle for the entire page. Instead, Astro has only shipped the UserList.jsx component as its own as individual JavaScript file.
+  
+  This demonstrates the 'island architecture' in action. The static content was delivered as fast HTML, and only the small, isolated JavaScript needed for this one interactive component was sent to the client. This is the core of how Astro works.
+  
 </section>
 
 <section>
 
   ![Slide25](/AstroGroupWork/images/presentation/25.png)
+
+
+  At its heart, Astro is a performance-first framework. Its core principles are pre-rendering pages to static HTML and using the innovative 'island architecture' to handle interactivity.
+
+It's important to note that Astro isn't a framework that will work for every single use case. However, when SEO and user experience are critical, it is an ideal choice, providing fast page loads and fully indexable HTML for better search engine rankings.
+
+Since its launch, Astro has grown in popularity with developers at an incredible speed. This is likely due to its great flexibility, its framework-agnostic nature, and its full-stack capabilities.
+
+Finally, while Astro has a rapidly growing ecosystem, it is still young. It remains to be seen whether it is a short-term trend or if it will become a long-term fixture in the future of web development.
+
 </section>
