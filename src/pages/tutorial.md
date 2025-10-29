@@ -3,14 +3,40 @@ layout: ../layouts/BaseLayout.astro
 title: "Astro Tutorial"
 ---
 
-## Svelte Presentation
+# Astro Tutorial
 
-React is one of many frameworks that can be used for web app development, here is a brief introduction to an alternative which is popular with developers.
 
-Most of the information here is drawn from the [Svelte Website](https://svelte.dev/).
+## Setting Up Astro Locally
 
-![Slide1](/src/assets/page2/images/1.png)
+Just lift the detail from the presentation
 
-Slides for tutorial
+## Setting Up Astro in a Container
 
-![Slide2](/src/assets/page2/images/2.png)
+step by step of how to set up Astro in VS Code in container (think he wants this as done a lot in class)
+
+## How Astro's island Architecture Works With Other Frameworks
+
+### React
+
+Can lift the React example from presentation might need to make it more of a step by step though
+
+
+### Another Framework
+
+Worth having another basic one - maybe svelte
+
+
+
+## How to use API's and Fetching Data from External Sources With Astro
+
+Step by step of how to get it pulling data from the cocktail api example
+
+
+## Astro's File Routing System
+
+Show how Astro automatically creates routes based on your project’s folder and file structure inside the src/pages directory
+
+
+## Anything else? Probably need to find a bit more to talk about possibly?
+
+
