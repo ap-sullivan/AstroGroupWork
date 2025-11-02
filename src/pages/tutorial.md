@@ -3,12 +3,166 @@ layout: ../layouts/BaseLayout.astro
 title: "Astro Tutorial"
 ---
 
+<div class="presentation-content">
+
 # Astro Tutorial
 
+<section class="presentation-section">
 
 ## Setting Up Astro Locally
 
 Just lift the detail from the presentation
+
+![Image1](/AstroGroupWork/images/tutorial/1.png)
+
+</section>
+
+<section class="presentation-section">
+
+![Image2](/AstroGroupWork/images/tutorial/2.png)
+
+</section>
+
+<section class="presentation-section">
+
+![Image3](/AstroGroupWork/images/tutorial/3.png)
+
+</section>
+
+<section class="presentation-section">
+
+![Image4](/AstroGroupWork/images/tutorial/4.png)
+
+</section>
+
+<section class="presentation-section">
+
+![Image5](/AstroGroupWork/images/tutorial/5.png)
+
+</section>
+
+<section class="presentation-section">
+
+![Image6](/AstroGroupWork/images/tutorial/6.png)
+
+</section>
+
+<section class="presentation-section">
+
+![Image7](/AstroGroupWork/images/tutorial/7.png)
+
+</section>
+
+<section class="presentation-section">
+
+![Image8](/AstroGroupWork/images/tutorial/8.png)
+
+</section>
+
+<section class="presentation-section">
+
+![Image9](/AstroGroupWork/images/tutorial/9.png)
+
+</section>
+
+<section class="presentation-section">
+
+![Image10](/AstroGroupWork/images/tutorial/10.png)
+
+</section>
+
+<section class="presentation-section">
+
+![Image11](/AstroGroupWork/images/tutorial/11.png)
+
+</section>
+
+<section class="presentation-section">
+
+![Image12](/AstroGroupWork/images/tutorial/12.png)
+
+</section>
+
+<section class="presentation-section">
+
+![Image13](/AstroGroupWork/images/tutorial/13.png)
+
+</section>
+
+<section class="presentation-section">
+
+![Image14](/AstroGroupWork/images/tutorial/14.png)
+
+</section>
+
+<section class="presentation-section">
+
+![Image15](/AstroGroupWork/images/tutorial/15.png)
+
+</section>
+
+<section class="presentation-section">
+
+![Image16](/AstroGroupWork/images/tutorial/16.png)
+
+</section>
+
+<section class="presentation-section">
+
+![Image17](/AstroGroupWork/images/tutorial/17.png)
+
+</section>
+
+<section class="presentation-section">
+
+![Image18](/AstroGroupWork/images/tutorial/18.png)
+
+</section>
+
+<section class="presentation-section">
+
+![Image19](/AstroGroupWork/images/tutorial/19.png)
+
+</section>
+
+<section class="presentation-section">
+
+![Image20](/AstroGroupWork/images/tutorial/20.png)
+
+</section>
+
+<section class="presentation-section">
+
+![Image21](/AstroGroupWork/images/tutorial/21.png)
+
+</section>
+
+<section class="presentation-section">
+
+![Image22](/AstroGroupWork/images/tutorial/22.png)
+
+</section>
+
+<section class="presentation-section">
+
+![Image23](/AstroGroupWork/images/tutorial/23.png)
+
+</section>
+
+<section class="presentation-section">
+
+![Image24](/AstroGroupWork/images/tutorial/24.png)
+
+</section>
+
+</div>
+
+
+
+
+
+
+
 
 ## Setting Up Astro in a Container
 

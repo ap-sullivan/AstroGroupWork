@@ -3,14 +3,21 @@ layout: ../layouts/BaseLayout.astro
 title: "Astro Presentation"
 ---
 
-# Astro Presentation
 
+<div class="content">
+
+  
+<div class="headings">
+
+# Astro Presentation
 
 
 ### Andrew Sullivan, Ben Spiers, Pedro Santos, Stephen Ward 
 
-[Astro Website](https://astro.build/).
-[Astro Docs Website](https://docs.astro.build/en/getting-started/).
+### [Astro Website](https://astro.build/)
+### [Astro Docs Website](https://docs.astro.build/en/getting-started/)
+
+</div>
 
 <section>
 
@@ -338,3 +345,4 @@ Since its launch, Astro has grown in popularity with developers at an incredible
 Finally, while Astro has a rapidly growing ecosystem, it is still young. It remains to be seen whether it is a short-term trend or if it will become a long-term fixture in the future of web development.
 
 </section>
+</div>

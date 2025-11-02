@@ -33,7 +33,19 @@ const base = import.meta.env.BASE_URL;
         text-decoration: underline;
       }
 
-      main { padding: 6rem; }
+      main { padding: 3rem 6rem; }
+
+      @media (max-width: 768px) {
+
+        main {
+          padding: 1rem;
+        }
+      }
+
+      :global(.headings) {
+        margin-left: 2rem;
+        margin-bottom: 4rem;
+      }
 
       :global(.content img) {
         display: block;
@@ -68,7 +80,7 @@ const base = import.meta.env.BASE_URL;
       <a href={`${base}tutorial`}>Tutorial</a>
     </nav>
 
-    <main class="content">
+    <main>
       <slot /> 
     </main>
   </body>
