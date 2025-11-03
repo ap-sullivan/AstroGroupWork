@@ -194,7 +194,7 @@ Now create a folder in the /src folder called data and within that a file called
 ![Image18](/AstroGroupWork/images/tutorial/33.jpg)
 
 
-Next in components, create a file called UserList.jsx (or .tsx if using TypeScript depending on your language of choice). And copy the below code into the file which is the code for fetching the data contained in the user json file and then mapping the contents in a component that can be placed:
+Next in components, create a file called UserList.jsx (or .tsx if using TypeScript). And copy the below code into the file which is the code for fetching the data contained in the user json file and then mapping the contents in a component that can be placed:
 
 <pre id="code">
 import { useEffect, useState } from "react";
@@ -241,17 +241,38 @@ export default function UserList() {
 </section>
 
 
+<section class="tutorial-section">
 
+![Image21](/AstroGroupWork/images/tutorial/34.jpg)
 
-<!-- 
+Now create in your index.astro file import the UserList component at the top of the file, and then place the component on the page where you want the data to be rendered. 
+
+Putting client:load within the component means the JavaScript "island" will be rendered only on page load. This can be seen when you inspect the page using the dev tools. Have a look yourself and then try client:visible, which only loads when the component enters the viewport (you may need to clear cache or use a incognito browser window).
+
+</section>
+
 <section class="tutorial-section">
 
 
 
-![Image20](/AstroGroupWork/images/tutorial/20.png)
+![Image21](/AstroGroupWork/images/tutorial/35.jpg)
+
+The rendered page should look something like this (this screenshot has some CSS styling which is also imported to the index.astro file from a separate style sheet).
+
+</section>
 
 
-</section> -->
+<div class="tutorial-sub-headings">
+
+## Using Svelte with Astro to Fetch and External API
+
+
+Step by step of how to get it pulling data from the cocktail api example
+
+Lorem iPSUM
+
+</div>
+
 
 <section class="tutorial-section">
 
@@ -277,32 +298,6 @@ export default function UserList() {
 
 </section>
 
-</div>
-
-
-
-
-
-
-
-
-
-## How Astro's island Architecture Works With Other Frameworks
-
-### React
-
-Can lift the React example from presentation might need to make it more of a step by step though
-
-
-### Another Framework
-
-Worth having another basic one - maybe svelte
-
-
-
-## How to use API's and Fetching Data from External Sources With Astro
-
-Step by step of how to get it pulling data from the cocktail api example
 
 
 ## Astro's File Routing System
@@ -310,6 +305,11 @@ Step by step of how to get it pulling data from the cocktail api example
 Show how Astro automatically creates routes based on your project’s folder and file structure inside the src/pages directory
 
 
-## Anything else? Probably need to find a bit more to talk about possibly?
+
+</div>
+
+
+
+
 
 
