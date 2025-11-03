@@ -6,7 +6,7 @@ const base = import.meta.env.BASE_URL;
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-<link rel="icon" href={`${base}favicon.svg`} />
+    <link rel="icon" href={`${base}favicon.svg`} />
     <title>{title}</title>
     <style>
       body {
@@ -65,42 +65,40 @@ const base = import.meta.env.BASE_URL;
       }
 
       :global(.content p) {
-        
         line-height: 1.6;
         margin-bottom: 1rem;
         padding: 0 1rem;
       }
 
-        :global(.tutorial-headings) {
+         :global(.presentation-section) {
+        margin-bottom: 5rem;
+      }
+      
+
+      :global(.tutorial-headings) {
         margin-bottom: 4rem;
       }
 
-   
-
-      :global(.tutorial-section, .tutorial-sub-headings){
+      :global(.tutorial-section, .tutorial-sub-headings) {
         max-width: 85%;
         height: auto;
         margin: 1.5rem auto;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
       }
 
       @media (max-width: 768px) {
-       :global(.tutorial-section, .tutorial-sub-headings) {
+        :global(.tutorial-section, .tutorial-sub-headings) {
           max-width: 95%;
-          
-          
         }
       }
 
-         :global(.tutorial-sub-headings) {
-       
+      :global(.tutorial-sub-headings) {
         margin-top: 6rem;
       }
 
       :global(.tutorial-section p) {
         /* margin-right: 26rem; */
         line-height: 1.7rem;
-
       }
 
       :global(.tutorial-content img) {
@@ -110,9 +108,27 @@ const base = import.meta.env.BASE_URL;
         border-radius: 8px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       }
-      :global(section) {
-        margin-bottom: 5rem;
+
+      :global(#code) {
+        background-color: #1e1e1e;
+        max-width: 85%;
+        color: #d4d4d4;
+        font-family: "Fira Code", monospace;
+        border-radius: 8px;
+        overflow-x: auto;
+        line-height: 1.5;
+        font-size: 0.8rem;
+        padding: 5px;
       }
+
+      @media (max-width: 768px) {
+        :global(#code) {
+          max-width: 100%;
+        }
+      }
+
+    
+
     </style>
   </head>
   <body>

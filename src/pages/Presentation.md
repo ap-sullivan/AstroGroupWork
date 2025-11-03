@@ -19,7 +19,7 @@ title: "Astro Presentation"
 
 </div>
 
-<section>
+<section class="presentation-section">
 
 ![Slide1](/AstroGroupWork/images/presentation/1.png)
 
@@ -28,7 +28,7 @@ Welcome slide.
 </section>
 
 
-<section>
+<section class="presentation-section">
 
 ![Slide2](/AstroGroupWork/images/presentation/2.png)
 
@@ -36,7 +36,7 @@ Introduction and background.
 
 </section>
 
-<section>
+<section class="presentation-section">
 
 ![Slide3](/AstroGroupWork/images/presentation/3.png)
 
@@ -48,7 +48,7 @@ This process is known as partial hydration, and it feels like a bit of a game-ch
 
 </section>
 
-<section>
+<section class="presentation-section">
 
 ![Slide4](/AstroGroupWork/images/presentation/4.png)
 
@@ -60,7 +60,7 @@ This performance boost has a direct impact on Search Engine Optimization, or SEO
 
 </section>
 
-<section>
+<section class="presentation-section">
 
 ![Slide5](/AstroGroupWork/images/presentation/5.png)
 
@@ -71,7 +71,9 @@ What this means in practice is that you are not locked into a single technology,
 
 It also works with all the major CSS frameworks such as Tailwind and bootstrap and there are many community driven integrations with even more frameworks such as Angular, Lit and Flow.
 
-<section>
+</section>
+
+<section class="presentation-section">
 
 ![Slide6](/AstroGroupWork/images/presentation/6.png)
 
@@ -86,7 +88,7 @@ This approach is the key to Astro's philosophy of sending as little JavaScript a
 
 </section>
 
-<section>
+<section class="presentation-section">
 
   ![Slide7](/AstroGroupWork/images/presentation/7.png)
 
@@ -103,7 +105,7 @@ This approach is the key to Astro's philosophy of sending as little JavaScript a
 
 </section>
 
-<section>
+<section class="presentation-section">
 
   ![Slide8](/AstroGroupWork/images/presentation/8.png)
  
@@ -120,7 +122,7 @@ This approach is the key to Astro's philosophy of sending as little JavaScript a
 </section>
 
 
-<section>
+<section class="presentation-section">
 
   ![Slide9](/AstroGroupWork/images/presentation/9.png)
 
@@ -138,13 +140,13 @@ This approach is the key to Astro's philosophy of sending as little JavaScript a
   
 </section>
 
-<section>
+<section class="presentation-section">
 
   ![Slide10](/AstroGroupWork/images/presentation/10.png)
 
 </section>
 
-<section>
+<section class="presentation-section">
 
   ![Slide11](/AstroGroupWork/images/presentation/11.png)
 
@@ -156,7 +158,7 @@ This approach is the key to Astro's philosophy of sending as little JavaScript a
   
 </section>
 
-<section>
+<section class="presentation-section">
 
   ![Slide12](/AstroGroupWork/images/presentation/12.png)
 
@@ -166,7 +168,7 @@ This approach is the key to Astro's philosophy of sending as little JavaScript a
   
 </section>
 
-<section>
+<section class="presentation-section">
 
   ![Slide13](/AstroGroupWork/images/presentation/13.png)
 
@@ -178,7 +180,7 @@ This approach is the key to Astro's philosophy of sending as little JavaScript a
   
 </section>
 
-<section>
+<section class="presentation-section">
 
   ![Slide14](/AstroGroupWork/images/presentation/14.png)
 
@@ -191,7 +193,7 @@ And major tech companies like Cloudflare, Firebase who will have lots of documen
 
 </section>
 
-<section>
+<section class="presentation-section">
 
   ![Slide15](/AstroGroupWork/images/presentation/15.png)
 
@@ -205,7 +207,7 @@ And major tech companies like Cloudflare, Firebase who will have lots of documen
   
 </section>
 
-<section>
+<section class="presentation-section">
 
   ![Slide16](/AstroGroupWork/images/presentation/16.png)
 
@@ -213,7 +215,7 @@ And major tech companies like Cloudflare, Firebase who will have lots of documen
 
 </section>
 
-<section>
+<section class="presentation-section">
 
   ![Slide17](/AstroGroupWork/images/presentation/17.png)
 
@@ -227,7 +229,7 @@ And major tech companies like Cloudflare, Firebase who will have lots of documen
   
 </section>
 
-<section>
+<section class="presentation-section">
 
   ![Slide18](/AstroGroupWork/images/presentation/18.png)
 
@@ -248,7 +250,7 @@ And major tech companies like Cloudflare, Firebase who will have lots of documen
   
 </section>
 
-<section>
+<section class="presentation-section">
 
   ![Slide19](/AstroGroupWork/images/presentation/19.png)
 
@@ -268,14 +270,14 @@ And major tech companies like Cloudflare, Firebase who will have lots of documen
   
 </section>
 
-<section>
+<section class="presentation-section">
 
   ![Slide20](/AstroGroupWork/images/presentation/20.png)
 
   Lets look at how to set Astro up and an example of how easy it is to incorporate react components or "islands" into a Astro project.
 </section>
 
-<section>
+<section class="presentation-section">
 
   ![Slide21](/AstroGroupWork/images/presentation/21.png)
 
@@ -289,7 +291,7 @@ And major tech companies like Cloudflare, Firebase who will have lots of documen
   
 </section>
 
-<section>
+<section class="presentation-section">
 
   ![Slide22](/AstroGroupWork/images/presentation/22.png)
 
@@ -305,7 +307,7 @@ And major tech companies like Cloudflare, Firebase who will have lots of documen
   
 </section>
 
-<section>
+<section class="presentation-section">
 
   ![Slide23](/AstroGroupWork/images/presentation/23.png)
 
@@ -319,7 +321,7 @@ And major tech companies like Cloudflare, Firebase who will have lots of documen
   
 </section>
 
-<section>
+<section class="presentation-section">
 
   ![Slide24](/AstroGroupWork/images/presentation/24.png)
 
@@ -331,7 +333,7 @@ And major tech companies like Cloudflare, Firebase who will have lots of documen
   
 </section>
 
-<section>
+<section class="presentation-section">
 
   ![Slide25](/AstroGroupWork/images/presentation/25.png)
 

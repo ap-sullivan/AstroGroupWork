@@ -175,7 +175,68 @@ In the command line run '<strong>npx astro add react</strong>' to install the re
 
 ![Image18](/AstroGroupWork/images/tutorial/32.png)
 
-Now create a folder in the /src folder called data and within that a file called users.json.
+Now create a folder in the /src folder called data and within that a file called users.json, copy the below json into the file and save.
+
+
+<pre id="code">
+[
+  { "id": 1, "name": "Joe Bloggs", "role": "Full Stack Developer" },
+  { "id": 2, "name": "Jane Doe", "role": "Backend Engineer" },
+  { "id": 3, "name": "John Doe", "role": "UI/UX Designer" },
+  { "id": 4, "name": "Donald Trump", "role": "Frontend Developer" }
+]
+</pre>
+
+</section>
+
+<section class="tutorial-section">
+
+![Image18](/AstroGroupWork/images/tutorial/33.jpg)
+
+
+Next in components, create a file called UserList.jsx (or .tsx if using TypeScript depending on your language of choice). And copy the below code into the file which is the code for fetching the data contained in the user json file and then mapping the contents in a component that can be placed:
+
+<pre id="code">
+import { useEffect, useState } from "react";
+
+export default function UserList() {
+  const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() =&gt; {
+    // Fetch data from the local JSON file to simulate an API call
+    fetch("/src/data/users.json")
+      .then((res) =&gt; res.json())
+      .then((data) =&gt; {
+        setUsers(data);
+        setLoading(false);
+      })
+      .catch((error) =&gt; {
+        console.error("Error loading users:", error);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return &lt;p className="loading"&gt;Loading users...&lt;/p&gt;;
+  }
+  
+  return (
+    &lt;div className="user-list"&gt;
+      &lt;h3&gt;Team Members&lt;/h3&gt;
+      &lt;ul&gt;
+        {users.map((user) =&gt; (
+          &lt;li key={user.id} className="user-card"&gt;
+            &lt;strong&gt;{user.name}&lt;/strong&gt; &lt;br /&gt;
+            &lt;span&gt;{user.role}&lt;/span&gt;
+          &lt;/li&gt;
+        ))}
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  );
+}
+</pre>
+
 
 </section>
 
