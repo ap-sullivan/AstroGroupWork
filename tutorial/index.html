@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" data-astro-cid-37fxchfa> <head><meta charset="utf-8"><link rel="icon" href="/AstroGroupWork/favicon.svg"><title></title><style>body{font-family:Arial,Helvetica,sans-serif;margin:0;background-color:azure}nav[data-astro-cid-37fxchfa]{font-size:1.3rem;background:#222;padding:1.8rem;position:sticky;top:0}nav[data-astro-cid-37fxchfa] a[data-astro-cid-37fxchfa]{color:#fff;margin-right:10px;text-decoration:none}nav[data-astro-cid-37fxchfa] a[data-astro-cid-37fxchfa]:hover{text-decoration:underline}main[data-astro-cid-37fxchfa]{font-size:1.1rem;padding:3rem 6rem}@media(max-width:768px){main[data-astro-cid-37fxchfa]{padding:1rem;font-size:1rem}}.headings{margin-left:2rem;margin-bottom:4rem}.content img{display:block;max-width:100%;height:auto;margin:1.5rem auto;border-radius:8px;box-shadow:0 2px 10px #0000001a}.content h2{margin-top:2rem;color:#333}.content p{line-height:1.6;margin-bottom:1rem;padding:0 1rem}.presentation-section{margin-bottom:5rem}.tutorial-headings{margin-bottom:4rem}.tutorial-section,.tutorial-sub-headings{max-width:85%;height:auto;margin:1.5rem auto 3rem}@media(max-width:768px){.tutorial-section,.tutorial-sub-headings{max-width:95%}}.tutorial-sub-headings{margin-top:6rem}.tutorial-section p{line-height:1.7rem}.tutorial-content img{display:block;min-width:40%;height:auto;border-radius:8px;box-shadow:0 2px 10px #0000001a}#code{background-color:#1e1e1e;max-width:85%;color:#d4d4d4;font-family:Fira Code,monospace;border-radius:8px;overflow-x:auto;line-height:1.5;font-size:.8rem;padding:5px}@media(max-width:768px){#code{max-width:100%}}
+<!DOCTYPE html><html lang="en" data-astro-cid-37fxchfa> <head><meta charset="utf-8"><link rel="icon" href="/AstroGroupWork/favicon.svg"><title></title><style>body{font-family:Arial,Helvetica,sans-serif;margin:0;background-color:azure}nav[data-astro-cid-37fxchfa]{font-size:1.3rem;background:#222;padding:1.8rem;position:sticky;top:0}nav[data-astro-cid-37fxchfa] a[data-astro-cid-37fxchfa]{color:#fff;margin-right:10px;text-decoration:none}nav[data-astro-cid-37fxchfa] a[data-astro-cid-37fxchfa]:hover{text-decoration:underline}main[data-astro-cid-37fxchfa]{font-size:1.1rem;padding:3rem 6rem}@media(max-width:768px){main[data-astro-cid-37fxchfa]{padding:1rem;font-size:1rem}}.headings{margin-left:2rem;margin-bottom:4rem}.content img{display:block;max-width:100%;height:auto;margin:1.5rem auto;border-radius:8px;box-shadow:0 2px 10px #0000001a}.content h2{margin-top:2rem;color:#333}.content p{text-align:justify;line-height:1.6;margin-bottom:1rem;padding:0 1rem}.presentation-section{margin-bottom:5rem}.tutorial-headings{margin-bottom:4rem}.tutorial-section,.tutorial-sub-headings{max-width:85%;height:auto;margin:1.5rem auto 3rem}@media(max-width:768px){.tutorial-section,.tutorial-sub-headings{max-width:95%}}.tutorial-sub-headings{margin-top:6rem}.tutorial-section p{line-height:1.7rem;text-align:justify}.tutorial-content img{display:block;min-width:40%;height:auto;border-radius:8px;box-shadow:0 2px 10px #0000001a}#code{background-color:#1e1e1e;max-width:85%;color:#d4d4d4;font-family:Fira Code,monospace;border-radius:8px;overflow-x:auto;line-height:1.5;font-size:.8rem;padding:5px}@media(max-width:768px){#code{max-width:100%}}
 </style></head> <body data-astro-cid-37fxchfa> <nav data-astro-cid-37fxchfa> <a href="/AstroGroupWork/" data-astro-cid-37fxchfa>Home</a> <a href="/AstroGroupWork/presentation" data-astro-cid-37fxchfa>Presentation</a> <a href="/AstroGroupWork/tutorial" data-astro-cid-37fxchfa>Tutorial</a> </nav> <main data-astro-cid-37fxchfa> <div class="tutorial-content" id="astroLocal">
 <div class="tutorial-headings">
 <h1 id="astro-introduction-tutorial">Astro Introduction Tutorial</h1>
@@ -91,7 +91,7 @@
 </section>
 <section class="tutorial-section">
 <p><img src="/AstroGroupWork/images/tutorial/33.jpg" alt="Image18"></p>
-<p>Next in components, create a file called UserList.jsx (or .tsx if using TypeScript depending on your language of choice). And copy the below code into the file which is the code for fetching the data contained in the user json file and then mapping the contents in a component that can be placed:</p>
+<p>Next in components, create a file called UserList.jsx (or .tsx if using TypeScript). And copy the below code into the file which is the code for fetching the data contained in the user json file and then mapping the contents in a component that can be placed:</p>
 <pre id="code">import { useEffect, useState } from "react";
 
 export default function UserList() {
@@ -132,15 +132,20 @@ export default function UserList() {
 }
 </pre>
 </section>
-<!-- 
 <section class="tutorial-section">
-
-
-
-![Image20](/AstroGroupWork/images/tutorial/20.png)
-
-
-</section> -->
+<p><img src="/AstroGroupWork/images/tutorial/34.jpg" alt="Image21"></p>
+<p>Now create in your index.astro file import the UserList component at the top of the file, and then place the component on the page where you want the data to be rendered.</p>
+<p>Putting client:load within the component means the JavaScript “island” will be rendered only on page load. This can be seen when you inspect the page using the dev tools. Have a look yourself and then try client:visible, which only loads when the component enters the viewport (you may need to clear cache or use a incognito browser window).</p>
+</section>
+<section class="tutorial-section">
+<p><img src="/AstroGroupWork/images/tutorial/35.jpg" alt="Image21"></p>
+<p>The rendered page should look something like this (this screenshot has some CSS styling which is also imported to the index.astro file from a separate style sheet).</p>
+</section>
+<div class="tutorial-sub-headings">
+<h2 id="using-svelte-with-astro-to-fetch-and-external-api">Using Svelte with Astro to Fetch and External API</h2>
+<p>Step by step of how to get it pulling data from the cocktail api example</p>
+<p>Lorem iPSUM</p>
+</div>
 <section class="tutorial-section">
 <p><img src="/AstroGroupWork/images/tutorial/21.png" alt="Image21"></p>
 </section>
@@ -153,14 +158,6 @@ export default function UserList() {
 <section class="tutorial-section">
 <p><img src="/AstroGroupWork/images/tutorial/24.png" alt="Image24"></p>
 </section>
-</div>
-<h2 id="how-astros-island-architecture-works-with-other-frameworks">How Astro’s island Architecture Works With Other Frameworks</h2>
-<h3 id="react">React</h3>
-<p>Can lift the React example from presentation might need to make it more of a step by step though</p>
-<h3 id="another-framework">Another Framework</h3>
-<p>Worth having another basic one - maybe svelte</p>
-<h2 id="how-to-use-apis-and-fetching-data-from-external-sources-with-astro">How to use API’s and Fetching Data from External Sources With Astro</h2>
-<p>Step by step of how to get it pulling data from the cocktail api example</p>
 <h2 id="astros-file-routing-system">Astro’s File Routing System</h2>
 <p>Show how Astro automatically creates routes based on your project’s folder and file structure inside the src/pages directory</p>
-<h2 id="anything-else-probably-need-to-find-a-bit-more-to-talk-about-possibly">Anything else? Probably need to find a bit more to talk about possibly?</h2> </main> </body></html>
+</div> </main> </body></html>
