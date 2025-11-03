@@ -344,7 +344,7 @@ It's important to note that Astro isn't a framework that will work for every sin
 
 Since its launch, Astro has grown in popularity with developers at an incredible speed. This is likely due to its great flexibility, its framework-agnostic nature, and its full-stack capabilities.
 
-Finally, while Astro has a rapidly growing ecosystem, it is still young. It remains to be seen whether it is a short-term trend or if it will become a long-term fixture in the future of web development.
+Finally, while Astro has a rapidly growing ecosystem, it is still young. It remains to be seen whether it is a short-term trend or if it will become a long-term fixture and become the future of web development.
 
 </section>
 </div>
