@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" data-astro-cid-37fxchfa> <head><meta charset="utf-8"><link rel="icon" href="/AstroGroupWork/favicon.svg"><title></title><style>body{font-family:Arial,Helvetica,sans-serif;margin:0;background-color:azure}nav[data-astro-cid-37fxchfa]{font-size:1.3rem;background:#222;padding:1.8rem;position:sticky;top:0}nav[data-astro-cid-37fxchfa] a[data-astro-cid-37fxchfa]{color:#fff;margin-right:10px;text-decoration:none}nav[data-astro-cid-37fxchfa] a[data-astro-cid-37fxchfa]:hover{text-decoration:underline}main[data-astro-cid-37fxchfa]{font-size:1.1rem;padding:3rem 6rem}@media(max-width:768px){main[data-astro-cid-37fxchfa]{padding:1rem;font-size:1rem}}.headings{margin-left:2rem;margin-bottom:4rem}.content img{display:block;max-width:100%;height:auto;margin:1.5rem auto;border-radius:8px;box-shadow:0 2px 10px #0000001a}.content h2{margin-top:2rem;color:#333}.content p{line-height:1.6;margin-bottom:1rem;padding:0 1rem}.tutorial-headings{margin-bottom:4rem}.tutorial-section,.tutorial-sub-headings{max-width:85%;height:auto;margin:1.5rem auto 2rem}@media(max-width:768px){.tutorial-section,.tutorial-sub-headings{max-width:95%}}.tutorial-sub-headings{margin-top:6rem}.tutorial-section p{line-height:1.7rem}.tutorial-content img{display:block;min-width:40%;height:auto;border-radius:8px;box-shadow:0 2px 10px #0000001a}section{margin-bottom:5rem}
+<!DOCTYPE html><html lang="en" data-astro-cid-37fxchfa> <head><meta charset="utf-8"><link rel="icon" href="/AstroGroupWork/favicon.svg"><title></title><style>body{font-family:Arial,Helvetica,sans-serif;margin:0;background-color:azure}nav[data-astro-cid-37fxchfa]{font-size:1.3rem;background:#222;padding:1.8rem;position:sticky;top:0}nav[data-astro-cid-37fxchfa] a[data-astro-cid-37fxchfa]{color:#fff;margin-right:10px;text-decoration:none}nav[data-astro-cid-37fxchfa] a[data-astro-cid-37fxchfa]:hover{text-decoration:underline}main[data-astro-cid-37fxchfa]{font-size:1.1rem;padding:3rem 6rem}@media(max-width:768px){main[data-astro-cid-37fxchfa]{padding:1rem;font-size:1rem}}.headings{margin-left:2rem;margin-bottom:4rem}.content img{display:block;max-width:100%;height:auto;margin:1.5rem auto;border-radius:8px;box-shadow:0 2px 10px #0000001a}.content h2{margin-top:2rem;color:#333}.content p{line-height:1.6;margin-bottom:1rem;padding:0 1rem}.presentation-section{margin-bottom:5rem}.tutorial-headings{margin-bottom:4rem}.tutorial-section,.tutorial-sub-headings{max-width:85%;height:auto;margin:1.5rem auto 3rem}@media(max-width:768px){.tutorial-section,.tutorial-sub-headings{max-width:95%}}.tutorial-sub-headings{margin-top:6rem}.tutorial-section p{line-height:1.7rem}.tutorial-content img{display:block;min-width:40%;height:auto;border-radius:8px;box-shadow:0 2px 10px #0000001a}#code{background-color:#1e1e1e;max-width:85%;color:#d4d4d4;font-family:Fira Code,monospace;border-radius:8px;overflow-x:auto;line-height:1.5;font-size:.8rem;padding:5px}@media(max-width:768px){#code{max-width:100%}}
 </style></head> <body data-astro-cid-37fxchfa> <nav data-astro-cid-37fxchfa> <a href="/AstroGroupWork/" data-astro-cid-37fxchfa>Home</a> <a href="/AstroGroupWork/presentation" data-astro-cid-37fxchfa>Presentation</a> <a href="/AstroGroupWork/tutorial" data-astro-cid-37fxchfa>Tutorial</a> </nav> <main data-astro-cid-37fxchfa> <div class="tutorial-content" id="astroLocal">
 <div class="tutorial-headings">
 <h1 id="astro-introduction-tutorial">Astro Introduction Tutorial</h1>
@@ -80,7 +80,57 @@
 </section>
 <section class="tutorial-section">
 <p><img src="/AstroGroupWork/images/tutorial/32.png" alt="Image18"></p>
-<p>Now create a folder in the /src folder called data and within that a file called users.json.</p>
+<p>Now create a folder in the /src folder called data and within that a file called users.json, copy the below json into the file and save.</p>
+<pre id="code">[
+  { "id": 1, "name": "Joe Bloggs", "role": "Full Stack Developer" },
+  { "id": 2, "name": "Jane Doe", "role": "Backend Engineer" },
+  { "id": 3, "name": "John Doe", "role": "UI/UX Designer" },
+  { "id": 4, "name": "Donald Trump", "role": "Frontend Developer" }
+]
+</pre>
+</section>
+<section class="tutorial-section">
+<p><img src="/AstroGroupWork/images/tutorial/33.jpg" alt="Image18"></p>
+<p>Next in components, create a file called UserList.jsx (or .tsx if using TypeScript depending on your language of choice). And copy the below code into the file which is the code for fetching the data contained in the user json file and then mapping the contents in a component that can be placed:</p>
+<pre id="code">import { useEffect, useState } from "react";
+
+export default function UserList() {
+  const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Fetch data from the local JSON file to simulate an API call
+    fetch("/src/data/users.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setUsers(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error loading users:", error);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return &#x3C;p className="loading">Loading users...&#x3C;/p>;
+  }
+  
+  return (
+    &#x3C;div className="user-list">
+      &#x3C;h3>Team Members&#x3C;/h3>
+      &#x3C;ul>
+        {users.map((user) => (
+          &#x3C;li key={user.id} className="user-card">
+            &#x3C;strong>{user.name}&#x3C;/strong> &#x3C;br />
+            &#x3C;span>{user.role}&#x3C;/span>
+          &#x3C;/li>
+        ))}
+      &#x3C;/ul>
+    &#x3C;/div>
+  );
+}
+</pre>
 </section>
 <!-- 
 <section class="tutorial-section">

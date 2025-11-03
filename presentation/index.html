@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" data-astro-cid-37fxchfa> <head><meta charset="utf-8"><link rel="icon" href="/AstroGroupWork/favicon.svg"><title></title><style>body{font-family:Arial,Helvetica,sans-serif;margin:0;background-color:azure}nav[data-astro-cid-37fxchfa]{font-size:1.3rem;background:#222;padding:1.8rem;position:sticky;top:0}nav[data-astro-cid-37fxchfa] a[data-astro-cid-37fxchfa]{color:#fff;margin-right:10px;text-decoration:none}nav[data-astro-cid-37fxchfa] a[data-astro-cid-37fxchfa]:hover{text-decoration:underline}main[data-astro-cid-37fxchfa]{font-size:1.1rem;padding:3rem 6rem}@media(max-width:768px){main[data-astro-cid-37fxchfa]{padding:1rem;font-size:1rem}}.headings{margin-left:2rem;margin-bottom:4rem}.content img{display:block;max-width:100%;height:auto;margin:1.5rem auto;border-radius:8px;box-shadow:0 2px 10px #0000001a}.content h2{margin-top:2rem;color:#333}.content p{line-height:1.6;margin-bottom:1rem;padding:0 1rem}.tutorial-headings{margin-bottom:4rem}.tutorial-section,.tutorial-sub-headings{max-width:85%;height:auto;margin:1.5rem auto 2rem}@media(max-width:768px){.tutorial-section,.tutorial-sub-headings{max-width:95%}}.tutorial-sub-headings{margin-top:6rem}.tutorial-section p{line-height:1.7rem}.tutorial-content img{display:block;min-width:40%;height:auto;border-radius:8px;box-shadow:0 2px 10px #0000001a}section{margin-bottom:5rem}
+<!DOCTYPE html><html lang="en" data-astro-cid-37fxchfa> <head><meta charset="utf-8"><link rel="icon" href="/AstroGroupWork/favicon.svg"><title></title><style>body{font-family:Arial,Helvetica,sans-serif;margin:0;background-color:azure}nav[data-astro-cid-37fxchfa]{font-size:1.3rem;background:#222;padding:1.8rem;position:sticky;top:0}nav[data-astro-cid-37fxchfa] a[data-astro-cid-37fxchfa]{color:#fff;margin-right:10px;text-decoration:none}nav[data-astro-cid-37fxchfa] a[data-astro-cid-37fxchfa]:hover{text-decoration:underline}main[data-astro-cid-37fxchfa]{font-size:1.1rem;padding:3rem 6rem}@media(max-width:768px){main[data-astro-cid-37fxchfa]{padding:1rem;font-size:1rem}}.headings{margin-left:2rem;margin-bottom:4rem}.content img{display:block;max-width:100%;height:auto;margin:1.5rem auto;border-radius:8px;box-shadow:0 2px 10px #0000001a}.content h2{margin-top:2rem;color:#333}.content p{line-height:1.6;margin-bottom:1rem;padding:0 1rem}.presentation-section{margin-bottom:5rem}.tutorial-headings{margin-bottom:4rem}.tutorial-section,.tutorial-sub-headings{max-width:85%;height:auto;margin:1.5rem auto 3rem}@media(max-width:768px){.tutorial-section,.tutorial-sub-headings{max-width:95%}}.tutorial-sub-headings{margin-top:6rem}.tutorial-section p{line-height:1.7rem}.tutorial-content img{display:block;min-width:40%;height:auto;border-radius:8px;box-shadow:0 2px 10px #0000001a}#code{background-color:#1e1e1e;max-width:85%;color:#d4d4d4;font-family:Fira Code,monospace;border-radius:8px;overflow-x:auto;line-height:1.5;font-size:.8rem;padding:5px}@media(max-width:768px){#code{max-width:100%}}
 </style></head> <body data-astro-cid-37fxchfa> <nav data-astro-cid-37fxchfa> <a href="/AstroGroupWork/" data-astro-cid-37fxchfa>Home</a> <a href="/AstroGroupWork/presentation" data-astro-cid-37fxchfa>Presentation</a> <a href="/AstroGroupWork/tutorial" data-astro-cid-37fxchfa>Tutorial</a> </nav> <main data-astro-cid-37fxchfa> <div class="content">
 <div class="headings">
 <h1 id="astro-presentation">Astro Presentation</h1>
@@ -6,39 +6,40 @@
 <h3 id="astro-website"><a href="https://astro.build/">Astro Website</a></h3>
 <h3 id="astro-docs-website"><a href="https://docs.astro.build/en/getting-started/">Astro Docs Website</a></h3>
 </div>
-<section>
+<section class="presentation-section">
 <p><img src="/AstroGroupWork/images/presentation/1.png" alt="Slide1"></p>
 <p>Welcome slide.</p>
 </section>
-<section>
+<section class="presentation-section">
 <p><img src="/AstroGroupWork/images/presentation/2.png" alt="Slide2"></p>
 <p>Introduction and background.</p>
 </section>
-<section>
+<section class="presentation-section">
 <p><img src="/AstroGroupWork/images/presentation/3.png" alt="Slide3"></p>
 <p>At its core, Astro is a modern web framework specifically designed for building fast, content-focused websites. It’s a relatively new player in the field, having first been released in 2022.</p>
 <p>The main philosophy behind Astro is simple but powerful: send as little JavaScript to the browser as possible. Instead of loading a large bundle of JavaScript to render the entire page, Astro does most of the work on the server. You then add interactivity only where you need it by embedding components from frameworks, like React, Vue, or Svelte or just vanilla JS.</p>
 <p>This process is known as partial hydration, and it feels like a bit of a game-changer for web performance.</p>
 </section>
-<section>
+<section class="presentation-section">
 <p><img src="/AstroGroupWork/images/presentation/4.png" alt="Slide4"></p>
 <p>Why choose Astro over something more established? To understand this, let’s look at a traditional Single Page Application, or SPA, like one built with React. In a typical SPA, the entire page runs as a single, large JavaScript application. This means the user’s browser must download, parse, and execute a large JavaScript bundle just to see the content, which can be slow.</p>
 <p>With Astro, the entire page is rendered into static HTML at build time. This means when a user visits the site, they get a fully-formed HTML page almost instantly. The interactive parts of the page are treated as isolated ‘islands’ that load their necessary JavaScript only after the main page content has already been rendered. The result is a much smaller JavaScript bundle and significantly faster page loads.</p>
 <p>This performance boost has a direct impact on Search Engine Optimization, or SEO. Search engines like Google can index the full HTML content immediately without waiting for JavaScript to run, which leads to better rankings.</p>
 </section>
-<section>
+<section class="presentation-section">
 <p><img src="/AstroGroupWork/images/presentation/5.png" alt="Slide5"></p>
 <p>One of Astro’s most powerful and unique features is that it is ‘Framework Agnostic’ as Astro lets you embed interactive components from other JavaScript frameworks directly into your pages.</p>
 <p>What this means in practice is that you are not locked into a single technology, web developers aren’t forced to use only React, Vue, Svelte SolidJS, alpine js, you can use them all  alongside Astro.</p>
 <p>It also works with all the major CSS frameworks such as Tailwind and bootstrap and there are many community driven integrations with even more frameworks such as Angular, Lit and Flow.</p>
-<section>
+</section>
+<section class="presentation-section">
 <p><img src="/AstroGroupWork/images/presentation/6.png" alt="Slide6"></p>
 <p>Astro’s magic lies in a concept called the Island Architecture. Imagine a webpage is a large sea of static, non-interactive HTML. This ‘sea’ is all your text, images, and basic layout and it can be rendered on the server and sent to the browser incredibly quickly because it’s just simple HTML and CSS. Scattered within that are your interactive UI components like image carousels,  search bars, or a ‘add to cart’ button. These are your ‘islands’.</p>
 <p>Instead of treating the entire page as one large, complex JavaScript application like a traditional SPA does, Astro treats it as mostly static HTML with a few isolated islands of interactivity. Astro renders the static HTML for everything first, so the user sees content almost instantly.</p>
 <p>Only after the static page has loaded does Astro begin to ‘hydrate’ these islands, loading the small, self-contained JavaScript required to make them functional. This means if a user never scrolls down to your image carousel, the JavaScript for it might never even load.</p>
 <p>This approach is the key to Astro’s philosophy of sending as little JavaScript as possible, resulting in faster page loads, better SEO, and a much smoother user experience.</p>
 </section>
-<section>
+<section class="presentation-section">
 <p><img src="/AstroGroupWork/images/presentation/7.png" alt="Slide7"></p>
 <p>This flowchart provides a visualisation of the entire page load process showing how Astro delivers its speed of load.</p>
 <ol>
@@ -56,14 +57,14 @@
 </li>
 </ol>
 </section>
-<section>
+<section class="presentation-section">
 <p><img src="/AstroGroupWork/images/presentation/8.png" alt="Slide8"></p>
 <p>Traditional frameworks are fundamentally client-side heavy. Entire pages often require a full JavaScript bundle to render in the user’s browser, which can significantly increase initial load times. Astro, by contrast, does this work on the server, sending pre-built HTML for maximum speed.</p>
 <p>This client-side approach creates SEO challenges and SPAs need extra work like server-side rendering or pre-rendering just to make their content crawlable by Google and other search indexers. Astro avoids this problem entirely by serving static HTML by default.</p>
 <p>Because of these factors, frameworks like React and Vue can be less efficient for content-heavy sites, which is precisely the area where Astro excels.</p>
 <p>A React or Vue project usually commits you to that single framework but Astro is uniquely different; it empowers developers to mix components freely, allowing them take the best bits of each technology and use them together on the same page.</p>
 </section>
-<section>
+<section class="presentation-section">
 <p><img src="/AstroGroupWork/images/presentation/9.png" alt="Slide9"></p>
 <p>Of course, no technology perfect and these of the challenges of working with Astro.</p>
 <p>As a new framework, the ecosystem is still evolving. This means you might find fewer ready-made libraries, plugins, and community support compared to more established giants like React or Vue. While the community is growing incredibly fast, you might occasionally have to build a solution yourself that would be readily available in an older ecosystem.</p>
@@ -72,51 +73,51 @@
 <p>Astro is not ideal for highly dynamic apps, for those use cases, a traditional client-side framework might still be a better fit.</p>
 <p>Finally, sites that are very large may experience long build times. The process of pre-rendering every single page can take more time to deploy than frameworks that render pages on demand. This is a direct trade-off you make: a potentially longer wait for deployment in exchange for a superior and faster user experience at page load time.</p>
 </section>
-<section>
+<section class="presentation-section">
 <p><img src="/AstroGroupWork/images/presentation/10.png" alt="Slide10"></p>
 </section>
-<section>
+<section class="presentation-section">
 <p><img src="/AstroGroupWork/images/presentation/11.png" alt="Slide11"></p>
 <p>Although Astro is a new framework that was only released in 2022, its adoption has been pretty rapid. This graph, using data from BuiltWith.com, shows the number of websites across the entire internet that use Astro.</p>
 <p>As you can see, the line is practically vertical from 2023 onwards and the statistics indicate that there are now over a million sites that use this technology.</p>
 <p>However this is still relatively small fry when you consider that there are 3m next.js sites and over 50m sites built with react.</p>
 </section>
-<section>
+<section class="presentation-section">
 <p><img src="/AstroGroupWork/images/presentation/12.png" alt="Slide12"></p>
 <p>This chart comes from a 2024 Netlify developer survey, which highlights the change in framework usage between 2023 and 2024.</p>
 <p>Astro is at the very top, showing a 10.6% swing in usage among developers.</p>
 </section>
-<section>
+<section class="presentation-section">
 <p><img src="/AstroGroupWork/images/presentation/13.png" alt="Slide13"></p>
 <p>Astro really excels at content-heavy sites where performance is critical. This includes blogs, marketing pages, documentation sites, personal portfolios, and e-commerce front-ends.</p>
 <p>Naturally, it’s a perfect choice for any project where SEO is a top priority, because Google and other search engines reward fast, accessible pages with better rankings. It’s also a great solution if you need to support users on slower networks or mobile devices, where large JavaScript bundles from traditional SPAs can be a significant problem.</p>
 <p>Finally, Astro is an excellent tool for modernising an existing website. You can perform a partial or progressive migration from an older framework without needing a full, risky rebuild that could take months and remove functionality</p>
 </section>
-<section>
+<section class="presentation-section">
 <p><img src="/AstroGroupWork/images/presentation/14.png" alt="Slide14"></p>
 <p>Here are just a few of the major companies and brands that use Astro for their websites.</p>
 <p>Major media outlets like The Guardian and NBC News which obviously have large amounts of content and global brands like IKEA, Porsche, and Unilever which again will have a lot of content for products and want good SEO to be above competitors in google rankings.</p>
 <p>And major tech companies like Cloudflare, Firebase who will have lots of documentation on their sites, and therefore pretty heavy on load times without statically generated HTML.</p>
 </section>
-<section>
+<section class="presentation-section">
 <p><img src="/AstroGroupWork/images/presentation/15.png" alt="Slide15"></p>
 <p>To make getting started with the framework even easier, Astro has a library of pre-built templates and themes.</p>
 <p>You can find starter kits for specific projects like a restaurant website , a job board , an e-commerce store , or a developer portfolio plus many more.</p>
 <p>These templates are perfect for quickly prototyping a new site idea. They can also serve as a solid starting block for a bigger project, saving you from having to build common features from scratch.</p>
 <p>They are fully customisable, allowing a developer to extend and modify the code as much as they please to meet the project’s specific requirements.</p>
 </section>
-<section>
+<section class="presentation-section">
 <p><img src="/AstroGroupWork/images/presentation/16.png" alt="Slide16"></p>
 <p>So how does Astro fit in with other web technologies?</p>
 </section>
-<section>
+<section class="presentation-section">
 <p><img src="/AstroGroupWork/images/presentation/17.png" alt="Slide17"></p>
 <p>Astro slots in well in the modern web ecosystem with its flexibility and compatibility with so many new and old technologies.</p>
 <p>You can use components from React, Vue, Svelte, and others seamlessly within the same project</p>
 <p>Since Astro runs on Node.js for its backend features, it can connect to any database that works with this technology. This includes traditional SQL databases like MySQL or PostgreSQL and NoSQL databases like MongoDB or Firebase,  and Cloud-hosted databases such as Firebase and Supabase.</p>
 <p>Astro is built to consume data from anywhere so working with API’s is seamles. It works with both REST and GraphQL APIs and can fetch data at different times: during the site build at deployment for static content, on the server for dynamic pages, or on the client-side within interactive islands.</p>
 </section>
-<section>
+<section class="presentation-section">
 <p><img src="/AstroGroupWork/images/presentation/18.png" alt="Slide18"></p>
 <p>It integrates smoothly with popular headless content management systems like Contentful, Sanity, and Strapi which let you store text, images, and other content online and then fetch it via an API, this technique would be used heavily for e-commerce front ends or documentation sites which Astro works best for.</p>
 <p>It integrates perfectly with styling tools like Tailwind, Sass, and PostCSS, and it supports TypeScript out of the box.</p>
@@ -126,7 +127,7 @@
 <p>You can also run Astro on your own Node.js server.</p>
 <p>Essentially, you can use Astro to build anything from a simple static site to a full-stack web app with live data.</p>
 </section>
-<section>
+<section class="presentation-section">
 <p><img src="/AstroGroupWork/images/presentation/19.png" alt="Slide19"></p>
 <p>Leading on from the last slide, while Astro excels at static sites, it’s also a capable full-stack framework as evidenced by the number of technologies you can work with.</p>
 <p>The front-end would be handled by its static-site generation (SSG) capabilities and the concept of hydrating JavaScript ‘islands.</p>
@@ -136,18 +137,18 @@
 <p>For security, Astro supports popular authentication libraries like JWT or OAuth — which means it’s capable of handling login systems and protected routes.</p>
 <p>As a framework Astro gives you the best of both worlds — static speed on the front end, with dynamic power and flexibility on the back end.</p>
 </section>
-<section>
+<section class="presentation-section">
 <p><img src="/AstroGroupWork/images/presentation/20.png" alt="Slide20"></p>
 <p>Lets look at how to set Astro up and an example of how easy it is to incorporate react components or “islands” into a Astro project.</p>
 </section>
-<section>
+<section class="presentation-section">
 <p><img src="/AstroGroupWork/images/presentation/21.png" alt="Slide21"></p>
 <p>Getting started with Astro very simple and takes only a few minutes.</p>
 <p>The most direct way is a local setup. As long as you have Node.js installed, you can just open your command line and run npm create astro@latest. The installer will then guide you through a few simple prompts, like naming your project and whether to install dependencies or initialize a Git repository. Once it’s finished, you just cd into the new folder and run npm run dev to start a local development server with live updates.</p>
 <p>Of course, if you prefer a containerised approach, you can also set up your project using Docker by installing the package within a Node.js container.</p>
 <p>To enhance the development experience there is an official plugin for VS Code. This is incredibly useful, providing features like syntax highlighting, IntelliSense, code formatting, and much more, which generally makes life a lot easier when writing Astro code.</p>
 </section>
-<section>
+<section class="presentation-section">
 <p><img src="/AstroGroupWork/images/presentation/22.png" alt="Slide22"></p>
 <p>The next two slides show a practical example of how Astro works in conjunction with React.</p>
 <p>Adding React to an existing Astro project is easy, you just run a single command in your terminal “npx astro add react”.</p>
@@ -161,24 +162,24 @@
 </li>
 </ol>
 </section>
-<section>
+<section class="presentation-section">
 <p><img src="/AstroGroupWork/images/presentation/23.png" alt="Slide23"></p>
 <p>Once React is added, you can start using components. This slide shows the two key files.</p>
 <p>On the left, we have a standard React component called UserList.jsx. It uses familiar React hooks like useState to fetch data from a local JSON file and manage a loading state.</p>
 <p>On the right is our index.astro page. At the top, we are importing the UserList component just like you would in a regular React project. This is where Astro comes in as when we use the component in our HTML, we add the directive <strong>client:load</strong>.</p>
 <p>This is a command that tells Astro, ‘This component is an interactive island.’  And  should not be rendered to static HTML at build time; instead, its JavaScript should be sent to the browser and rendered only when the page loads. This is how we create our islands of interactivity.</p>
 </section>
-<section>
+<section class="presentation-section">
 <p><img src="/AstroGroupWork/images/presentation/24.png" alt="Slide24"></p>
 <p>And here is the final result. On the top left, you can see the fully rendered page in the browser. The React component has successfully fetched the data from the JSON file and mapped it to a list of team members, just as it would in any normal react project.</p>
 <p>The interesting part is what’s happening in the browser. If you look at the screenshot of the browser’s developer tools, you’ll notice there isn’t one large JavaScript bundle for the entire page. Instead, Astro has only shipped the UserList.jsx component as its own as individual JavaScript file.</p>
 <p>This demonstrates the ‘island architecture’ in action. The static content was delivered as fast HTML, and only the small, isolated JavaScript needed for this one interactive component was sent to the client. This is the core of how Astro works.</p>
 </section>
-<section>
+<section class="presentation-section">
 <p><img src="/AstroGroupWork/images/presentation/25.png" alt="Slide25"></p>
 <p>At its heart, Astro is a performance-first framework. Its core principles are pre-rendering pages to static HTML and using the innovative ‘island architecture’ to handle interactivity.</p>
 <p>It’s important to note that Astro isn’t a framework that will work for every single use case. However, when SEO and user experience are critical, it is an ideal choice, providing fast page loads and fully indexable HTML for better search engine rankings.</p>
 <p>Since its launch, Astro has grown in popularity with developers at an incredible speed. This is likely due to its great flexibility, its framework-agnostic nature, and its full-stack capabilities.</p>
 <p>Finally, while Astro has a rapidly growing ecosystem, it is still young. It remains to be seen whether it is a short-term trend or if it will become a long-term fixture in the future of web development.</p>
 </section>
-</section></div> </main> </body></html>
+</div> </main> </body></html>
