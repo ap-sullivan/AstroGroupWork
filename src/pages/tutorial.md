@@ -127,7 +127,7 @@ Now within the virtual container workspace you have created you can run the Astr
 
 ![Image15](/AstroGroupWork/images/tutorial/15.png)
 
-Once you have the Astro project setup you need to run '<strong>npm run dev -- --host 0.0.0.0</strong>', not just 'npm run dev', this ensures that the Astro files served from the container can be opened not just within the container but also on the local browser.
+Once you have the Astro project setup you need to run '<strong>npm run dev - - &nbsp; - -host 0.0.0.0</strong>', not just 'npm run dev', this ensures that the Astro files served from the container can be opened not just within the container but also on the local browser.
 
 </section>
 
@@ -267,9 +267,7 @@ The rendered page should look something like this (this screenshot has some CSS 
 ## Using Svelte with Astro to Fetch and External API
 
 
-Step by step of how to get it pulling data from the cocktail api example
-
-Lorem iPSUM
+As mentioned before you can use multiple frameworks and libraries within a single Astro project. This next section will bring in a svelte component that will render external API data on the same page as the react component that we just created, highlighting its flexibility as a framework.
 
 </div>
 
@@ -277,34 +275,239 @@ Lorem iPSUM
 <section class="tutorial-section">
 
 ![Image21](/AstroGroupWork/images/tutorial/21.png)
-
-</section>
-
-<section class="tutorial-section">
-
 ![Image22](/AstroGroupWork/images/tutorial/22.png)
 
+First of all you need to install svelte using the <strong>'npm install @astro/svelte svelte</strong> command and update the <strong>astro.config.mjs</strong> file as per above to import and integrate the framework to the project.
+
+</section>
+
+
+<section class="tutorial-section">
+
+![Image22](/AstroGroupWork/images/tutorial/36.jpg)
+
+Now create a component file (in the components folder) called Cocktails.svelte. and copy the code below into the component. This code sets up a fetch query to the cocktaildb API and maps the results as a list.
+
+<pre id="code">
+&lt;script&gt;
+  import { onMount } from 'svelte';
+  let q = 'margarita';    
+  let drinks = [];
+  let loading = true;
+  let error = null;
+
+  const base = 'https://www.thecocktaildb.com/api/json/v1/1';
+
+  async function fetchDrinks(query) {
+    loading = true;
+    error = null;
+    try {
+      const res = await fetch(`${base}/search.php?s=${encodeURIComponent(query)}`);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const json = await res.json();
+      drinks = json.drinks || [];
+    } catch (e) {
+      error = e.message;
+      drinks = [];
+    } finally {
+      loading = false;
+    }
+  }
+
+  onMount(() => {
+    //  fetch
+    fetchDrinks(q);
+  });
+&lt;/script&gt;
+
+&lt;section&gt;
+  {#if loading}
+    &lt;p&gt;Loading…&lt;/p&gt;
+  {:else if error}
+    &lt;p&gt;Error: {error}&lt;/p&gt;
+  {:else if drinks.length === 0}
+    &lt;p&gt;No results&lt;/p&gt;
+  {:else}
+    &lt;ul&gt;
+      {#each drinks as d}
+        &lt;li style="margin-bottom:1rem;"&gt;
+          &lt;strong&gt;{d.strDrink}&lt;/strong&gt; — {d.strAlcoholic} &lt;br /&gt;
+          &lt;small&gt;{d.strCategory} • {d.strGlass}&lt;/small&gt;
+          &lt;div style="max-width:85%;"&gt;{d.strInstructions}&lt;/div&gt;
+          {#if d.strDrinkThumb}
+            &lt;img src={d.strDrinkThumb} alt={d.strDrink} style="max-width:180px;margin-top:.5rem;" /&gt;
+          {/if}
+        &lt;/li&gt;
+      {/each}
+    &lt;/ul&gt;
+  {/if}
+&lt;/section&gt;
+</pre>
+
+</section>
+
+<br>
+
+<section class="tutorial-section">
+
+
+![Image23](/AstroGroupWork/images/tutorial/37.jpg)
+![Image23](/AstroGroupWork/images/tutorial/38.jpg)
+
+Back in index.astro, import the component at the top of the page, and then place the component below the react one that we added earlier.
+
 </section>
 
 <section class="tutorial-section">
 
-![Image23](/AstroGroupWork/images/tutorial/23.png)
+![Image24](/AstroGroupWork/images/tutorial/39.jpg)
+
+Now when you reload the page both the react component pulling data from the local json file is rendered to the page, and below that the list of cocktails being fetched from an external API in a svelte component. Magic!
+
+
 
 </section>
 
-<section class="tutorial-section">
 
-![Image24](/AstroGroupWork/images/tutorial/24.png)
-
-</section>
-
+<div class="tutorial-sub-headings">
 
 
 ## Astro's File Routing System
 
-Show how Astro automatically creates routes based on your project’s folder and file structure inside the src/pages directory
+The last thing covered in this tutorial is an example of Astro's file routing system which is one of the pros of using the framework. Instead of having a complex separate routing file, Astro using the file and folder structure of the project and mirrors this for the URL structure. This is great for blogs or websites that are heavily nested such as documentation and news sites.
+
+</div>
+
+<div class="tutorial-sub-headings">
 
 
+### Basic File Routing System
+</div>
+
+<section class="tutorial-section">
+
+
+
+![Image24](/AstroGroupWork/images/tutorial/41.jpg)
+
+Create a folder in src/pages called about.astro and add the below code
+
+
+
+<pre id="code">
+const pageTitle = "About";
+---
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;title&gt;{pageTitle}&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;{pageTitle}&lt;/h1&gt;
+  &lt;p&gt;
+    This is the about page....
+  &lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+
+</section>
+
+
+<section class="tutorial-section">
+
+![Image24](/AstroGroupWork/images/tutorial/40.jpg)
+
+Now in the browser add /about to the end of the localhost URL and the page should load. No separate routing definition required.
+
+
+</section>
+
+
+
+
+
+<div class="tutorial-sub-headings">
+
+### Dynamic File Routing System
+
+Where Astro really comes in useful for blogs and other sites that have heavily nested pages is using its dynamic page routes. 
+</div>
+
+<section class="tutorial-section">
+
+![Image24](/AstroGroupWork/images/tutorial/43.jpg)
+
+In the pages folder create a folder called blog and inside that folder create a file called <strong>[slug].astro</strong>. 
+
+
+</section>
+
+<section class="tutorial-section">
+
+![Image24](/AstroGroupWork/images/tutorial/44.jpg)
+
+Within the [slug].astro add the below code. This defines the pages that you want to use as paths (slugs).
+
+<pre id="code">
+---
+export async function getStaticPaths() {
+  return [
+    { params: { slug: 'post1' } },
+    { params: { slug: 'post2' } },
+    { params: { slug: 'whatever-slug-you-like' } },
+  ];
+}
+
+const { slug } = Astro.params;
+---
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;title&gt;Blog: {slug}&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Blog Post: {slug}&lt;/h1&gt;
+    &lt;a href=&quot;/blog/post1&quot;&gt;Post 1&lt;/a&gt;&lt;br /&gt;
+    &lt;a href=&quot;/blog/post2&quot;&gt;Post 2&lt;/a&gt;&lt;br /&gt;
+    &lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+</section>
+
+<section class="tutorial-section">
+
+
+![Image24](/AstroGroupWork/images/tutorial/42.jpg)
+
+Now add the code below to your index.astro file and go to the home page and click each link and see what URL the browser uses for each link.
+<pre id="code">
+&lt;h1&gt;Routing Example&lt;/h1&gt;
+&lt;p&gt;Go to blog posts:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/post1&quot;&gt;Post 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/post2&quot;&gt;Post 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/whatever-slug-you-like&quot;&gt;Hello World&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+
+</section>
+
+<section class="tutorial-section">
+
+![Image24](/AstroGroupWork/images/tutorial/45.jpg)
+
+The URL's and titles should match the pre-defined parameters defined in the [slug].astro file (these parameters would come from a headless CMS or database and wouldn't be hardcoded in a real site with lots of content). 
+</section>
+<section class="tutorial-section">
+
+## Last Words
+
+This tutorial introduced the core concept of Astro's island architecture and also its file routing system. Hopefully after doing the tutorial you can see the benefits of using the framework for certain use cases (content-heavy sites, SEO performance).
+
+</section>
 
 </div>
 
