@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" data-astro-cid-37fxchfa> <head><meta charset="utf-8"><link rel="icon" href="/AstroGroupWork/favicon.svg"><title></title><style>body{font-family:Arial,Helvetica,sans-serif;margin:0;background-color:azure}nav[data-astro-cid-37fxchfa]{font-size:1.3rem;background:#222;padding:1.8rem;position:sticky;top:0}nav[data-astro-cid-37fxchfa] a[data-astro-cid-37fxchfa]{color:#fff;margin-right:10px;text-decoration:none}nav[data-astro-cid-37fxchfa] a[data-astro-cid-37fxchfa]:hover{text-decoration:underline}main[data-astro-cid-37fxchfa]{font-size:1.1rem;padding:3rem 6rem}@media(max-width:768px){main[data-astro-cid-37fxchfa]{padding:1rem;font-size:1rem}}.headings{margin-left:2rem;margin-bottom:4rem}.content img{display:block;max-width:100%;height:auto;margin:1.5rem auto;border-radius:8px;box-shadow:0 2px 10px #0000001a}.content h2{margin-top:2rem;color:#333}.content p{text-align:justify;line-height:1.6;margin-bottom:1rem;padding:0 1rem}.presentation-section{margin-bottom:5rem}.tutorial-headings{margin-bottom:4rem}.tutorial-section,.tutorial-sub-headings{max-width:85%;height:auto;margin:1.5rem auto 3rem}@media(max-width:768px){.tutorial-section,.tutorial-sub-headings{max-width:95%}}.tutorial-sub-headings{margin-top:6rem}.tutorial-section p{line-height:1.7rem;text-align:justify}.tutorial-content img{display:block;min-width:40%;height:auto;border-radius:8px;box-shadow:0 2px 10px #0000001a}#code{background-color:#1e1e1e;max-width:85%;color:#d4d4d4;font-family:Fira Code,monospace;border-radius:8px;overflow-x:auto;line-height:1.5;font-size:.8rem;padding:5px}@media(max-width:768px){#code{max-width:100%}}
+<!DOCTYPE html><html lang="en" data-astro-cid-37fxchfa> <head><meta charset="utf-8"><link rel="icon" href="/AstroGroupWork/favicon.svg"><title></title><style>body{font-family:Arial,Helvetica,sans-serif;margin:0;background-color:azure}nav[data-astro-cid-37fxchfa]{font-size:1.3rem;background:#222;padding:1.8rem;position:sticky;top:0}nav[data-astro-cid-37fxchfa] a[data-astro-cid-37fxchfa]{color:#fff;margin-right:10px;text-decoration:none}nav[data-astro-cid-37fxchfa] a[data-astro-cid-37fxchfa]:hover{text-decoration:underline}main[data-astro-cid-37fxchfa]{font-size:1.1rem;padding:3rem 6rem}@media(max-width:768px){main[data-astro-cid-37fxchfa]{padding:1rem;font-size:1rem}}.headings{margin-left:2rem;margin-bottom:4rem}.content img{display:block;max-width:100%;height:auto;margin:1.5rem auto;border-radius:8px;box-shadow:0 2px 10px #0000004d}.content h2{margin-top:2rem;color:#333}.content p{text-align:justify;line-height:1.6;margin-bottom:1rem;padding:0 1rem}.presentation-section{margin-bottom:5rem}.tutorial-headings{margin-bottom:4rem}.tutorial-content{border:solid black 1px}.tutorial-section,.tutorial-sub-headings,.tutorial-headings{max-width:85%;height:auto;margin:1.5rem auto 3.5rem}@media(max-width:768px){.tutorial-section,.tutorial-sub-headings{max-width:95%}}.tutorial-sub-headings{margin-top:6rem}.tutorial-section p{line-height:1.7rem;text-align:justify}.tutorial-content img{display:block;min-width:40%;height:auto;border-radius:8px;box-shadow:0 2px 10px #0000004d}#code{background-color:#1e1e1e;max-width:85%;color:#d4d4d4;font-family:Fira Code,monospace;border-radius:8px;overflow-x:auto;line-height:1.5;font-size:.8rem;padding:5px}@media(max-width:768px){#code{max-width:100%}}
 </style></head> <body data-astro-cid-37fxchfa> <nav data-astro-cid-37fxchfa> <a href="/AstroGroupWork/" data-astro-cid-37fxchfa>Home</a> <a href="/AstroGroupWork/presentation" data-astro-cid-37fxchfa>Presentation</a> <a href="/AstroGroupWork/tutorial" data-astro-cid-37fxchfa>Tutorial</a> </nav> <main data-astro-cid-37fxchfa> <div class="tutorial-content" id="astroLocal">
 <div class="tutorial-headings">
 <h1 id="astro-introduction-tutorial">Astro Introduction Tutorial</h1>
@@ -58,7 +58,7 @@
 </section>
 <section class="tutorial-section">
 <p><img src="/AstroGroupWork/images/tutorial/15.png" alt="Image15"></p>
-<p>Once you have the Astro project setup you need to run ‘<strong>npm run dev — —host 0.0.0.0</strong>’, not just ‘npm run dev’, this ensures that the Astro files served from the container can be opened not just within the container but also on the local browser.</p>
+<p>Once you have the Astro project setup you need to run ‘<strong>npm run dev - -   - -host 0.0.0.0</strong>’, not just ‘npm run dev’, this ensures that the Astro files served from the container can be opened not just within the container but also on the local browser.</p>
 </section>
 <section class="tutorial-section">
 <p><img src="/AstroGroupWork/images/tutorial/28.jpg" alt="Image18"></p>
@@ -143,21 +143,163 @@ export default function UserList() {
 </section>
 <div class="tutorial-sub-headings">
 <h2 id="using-svelte-with-astro-to-fetch-and-external-api">Using Svelte with Astro to Fetch and External API</h2>
-<p>Step by step of how to get it pulling data from the cocktail api example</p>
-<p>Lorem iPSUM</p>
+<p>As mentioned before you can use multiple frameworks and libraries within a single Astro project. This next section will bring in a svelte component that will render external API data on the same page as the react component that we just created, highlighting its flexibility as a framework.</p>
 </div>
 <section class="tutorial-section">
-<p><img src="/AstroGroupWork/images/tutorial/21.png" alt="Image21"></p>
+<p><img src="/AstroGroupWork/images/tutorial/21.png" alt="Image21">
+<img src="/AstroGroupWork/images/tutorial/22.png" alt="Image22"></p>
+<p>First of all you need to install svelte using the <strong>‘npm install @astro/svelte svelte</strong> command and update the <strong>astro.config.mjs</strong> file as per above to import and integrate the framework to the project.</p>
 </section>
 <section class="tutorial-section">
-<p><img src="/AstroGroupWork/images/tutorial/22.png" alt="Image22"></p>
+<p><img src="/AstroGroupWork/images/tutorial/36.jpg" alt="Image22"></p>
+<p>Now create a component file (in the components folder) called Cocktails.svelte. and copy the code below into the component. This code sets up a fetch query to the cocktaildb API and maps the results as a list.</p>
+<pre id="code">&#x3C;script>
+  import { onMount } from 'svelte';
+  let q = 'margarita';    
+  let drinks = [];
+  let loading = true;
+  let error = null;
+
+  const base = 'https://www.thecocktaildb.com/api/json/v1/1';
+
+  async function fetchDrinks(query) {
+    loading = true;
+    error = null;
+    try {
+      const res = await fetch(`${base}/search.php?s=${encodeURIComponent(query)}`);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const json = await res.json();
+      drinks = json.drinks || [];
+    } catch (e) {
+      error = e.message;
+      drinks = [];
+    } finally {
+      loading = false;
+    }
+  }
+
+  onMount(() => {
+    //  fetch
+    fetchDrinks(q);
+  });
+&#x3C;/script>
+
+&#x3C;section>
+  {#if loading}
+    &#x3C;p>Loading…&#x3C;/p>
+  {:else if error}
+    &#x3C;p>Error: {error}&#x3C;/p>
+  {:else if drinks.length === 0}
+    &#x3C;p>No results&#x3C;/p>
+  {:else}
+    &#x3C;ul>
+      {#each drinks as d}
+        &#x3C;li style="margin-bottom:1rem;">
+          &#x3C;strong>{d.strDrink}&#x3C;/strong> — {d.strAlcoholic} &#x3C;br />
+          &#x3C;small>{d.strCategory} • {d.strGlass}&#x3C;/small>
+          &#x3C;div style="max-width:85%;">{d.strInstructions}&#x3C;/div>
+          {#if d.strDrinkThumb}
+            &#x3C;img src={d.strDrinkThumb} alt={d.strDrink} style="max-width:180px;margin-top:.5rem;" />
+          {/if}
+        &#x3C;/li>
+      {/each}
+    &#x3C;/ul>
+  {/if}
+&#x3C;/section>
+</pre>
+</section>
+<br>
+<section class="tutorial-section">
+<p><img src="/AstroGroupWork/images/tutorial/37.jpg" alt="Image23">
+<img src="/AstroGroupWork/images/tutorial/38.jpg" alt="Image23"></p>
+<p>Back in index.astro, import the component at the top of the page, and then place the component below the react one that we added earlier.</p>
 </section>
 <section class="tutorial-section">
-<p><img src="/AstroGroupWork/images/tutorial/23.png" alt="Image23"></p>
+<p><img src="/AstroGroupWork/images/tutorial/39.jpg" alt="Image24"></p>
+<p>Now when you reload the page both the react component pulling data from the local json file is rendered to the page, and below that the list of cocktails being fetched from an external API in a svelte component. Magic!</p>
 </section>
-<section class="tutorial-section">
-<p><img src="/AstroGroupWork/images/tutorial/24.png" alt="Image24"></p>
-</section>
+<div class="tutorial-sub-headings">
 <h2 id="astros-file-routing-system">Astro’s File Routing System</h2>
-<p>Show how Astro automatically creates routes based on your project’s folder and file structure inside the src/pages directory</p>
+<p>The last thing covered in this tutorial is an example of Astro’s file routing system which is one of the pros of using the framework. Instead of having a complex separate routing file, Astro using the file and folder structure of the project and mirrors this for the URL structure. This is great for blogs or websites that are heavily nested such as documentation and news sites.</p>
+</div>
+<div class="tutorial-sub-headings">
+<h3 id="basic-file-routing-system">Basic File Routing System</h3>
+</div>
+<section class="tutorial-section">
+<p><img src="/AstroGroupWork/images/tutorial/41.jpg" alt="Image24"></p>
+<p>Create a folder in src/pages called about.astro and add the below code</p>
+<pre id="code">const pageTitle = "About";
+---
+&#x3C;html lang="en">
+&#x3C;head>
+  &#x3C;title>{pageTitle}&#x3C;/title>
+&#x3C;/head>
+&#x3C;body>
+  &#x3C;h1>{pageTitle}&#x3C;/h1>
+  &#x3C;p>
+    This is the about page....
+  &#x3C;/p>
+&#x3C;/body>
+&#x3C;/html>
+</pre>
+</section>
+<section class="tutorial-section">
+<p><img src="/AstroGroupWork/images/tutorial/40.jpg" alt="Image24"></p>
+<p>Now in the browser add /about to the end of the localhost URL and the page should load. No separate routing definition required.</p>
+</section>
+<div class="tutorial-sub-headings">
+<h3 id="dynamic-file-routing-system">Dynamic File Routing System</h3>
+<p>Where Astro really comes in useful for blogs and other sites that have heavily nested pages is using its dynamic page routes.</p>
+</div>
+<section class="tutorial-section">
+<p><img src="/AstroGroupWork/images/tutorial/43.jpg" alt="Image24"></p>
+<p>In the pages folder create a folder called blog and inside that folder create a file called <strong>[slug].astro</strong>.</p>
+</section>
+<section class="tutorial-section">
+<p><img src="/AstroGroupWork/images/tutorial/44.jpg" alt="Image24"></p>
+<p>Within the [slug].astro add the below code. This defines the pages that you want to use as paths (slugs).</p>
+<pre id="code">---
+export async function getStaticPaths() {
+  return [
+    { params: { slug: 'post1' } },
+    { params: { slug: 'post2' } },
+    { params: { slug: 'whatever-slug-you-like' } },
+  ];
+}
+
+const { slug } = Astro.params;
+---
+&#x3C;html lang="en">
+  &#x3C;head>
+    &#x3C;title>Blog: {slug}&#x3C;/title>
+  &#x3C;/head>
+  &#x3C;body>
+    &#x3C;h1>Blog Post: {slug}&#x3C;/h1>
+    &#x3C;a href="/blog/post1">Post 1&#x3C;/a>&#x3C;br />
+    &#x3C;a href="/blog/post2">Post 2&#x3C;/a>&#x3C;br />
+    &#x3C;a href="/">Home&#x3C;/a>
+  &#x3C;/body>
+&#x3C;/html>
+</pre>
+</section>
+<section class="tutorial-section">
+<p><img src="/AstroGroupWork/images/tutorial/42.jpg" alt="Image24"></p>
+<p>Now add the code below to your index.astro file and go to the home page and click each link and see what URL the browser uses for each link.</p>
+<pre id="code">&#x3C;h1>Routing Example&#x3C;/h1>
+&#x3C;p>Go to blog posts:&#x3C;/p>
+&#x3C;ul>
+  &#x3C;li>&#x3C;a href="/blog/post1">Post 1&#x3C;/a>&#x3C;/li>
+  &#x3C;li>&#x3C;a href="/blog/post2">Post 2&#x3C;/a>&#x3C;/li>
+  &#x3C;li>&#x3C;a href="/blog/whatever-slug-you-like">Hello World&#x3C;/a>&#x3C;/li>
+&#x3C;/ul>
+</pre>
+</section>
+<section class="tutorial-section">
+<p><img src="/AstroGroupWork/images/tutorial/45.jpg" alt="Image24"></p>
+<p>The URL’s and titles should match the pre-defined parameters defined in the [slug].astro file (these parameters would come from a headless CMS or database and wouldn’t be hardcoded in a real site with lots of content).</p>
+</section>
+<section class="tutorial-section">
+<h2 id="last-words">Last Words</h2>
+<p>This tutorial introduced the core concept of Astro’s island architecture and also its file routing system. Hopefully after doing the tutorial you can see the benefits of using the framework for certain use cases (content-heavy sites, SEO performance).</p>
+</section>
 </div> </main> </body></html>
