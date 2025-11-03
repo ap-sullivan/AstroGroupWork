@@ -6,12 +6,12 @@ const base = import.meta.env.BASE_URL;
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href={`${base}favicon.ico`} />
+<link rel="icon" href={`${base}favicon.svg`} />
     <title>{title}</title>
     <style>
       body {
         font-family: Arial, Helvetica, sans-serif;
-        margin: 0; 
+        margin: 0;
         background-color: azure;
       }
 
@@ -33,12 +33,15 @@ const base = import.meta.env.BASE_URL;
         text-decoration: underline;
       }
 
-      main { padding: 3rem 6rem; }
+      main {
+        font-size: 1.1rem;
+        padding: 3rem 6rem;
+      }
 
       @media (max-width: 768px) {
-
         main {
           padding: 1rem;
+          font-size: 1rem;
         }
       }
 
@@ -53,7 +56,7 @@ const base = import.meta.env.BASE_URL;
         height: auto;
         margin: 1.5rem auto;
         border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       }
 
       :global(.content h2) {
@@ -62,12 +65,51 @@ const base = import.meta.env.BASE_URL;
       }
 
       :global(.content p) {
-        font-size: 1.1rem;
+        
         line-height: 1.6;
         margin-bottom: 1rem;
         padding: 0 1rem;
       }
 
+        :global(.tutorial-headings) {
+        margin-bottom: 4rem;
+      }
+
+   
+
+      :global(.tutorial-section, .tutorial-sub-headings){
+        max-width: 85%;
+        height: auto;
+        margin: 1.5rem auto;
+        margin-bottom: 2rem;
+      }
+
+      @media (max-width: 768px) {
+       :global(.tutorial-section, .tutorial-sub-headings) {
+          max-width: 95%;
+          
+          
+        }
+      }
+
+         :global(.tutorial-sub-headings) {
+       
+        margin-top: 6rem;
+      }
+
+      :global(.tutorial-section p) {
+        /* margin-right: 26rem; */
+        line-height: 1.7rem;
+
+      }
+
+      :global(.tutorial-content img) {
+        display: block;
+        min-width: 40%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
       :global(section) {
         margin-bottom: 5rem;
       }
@@ -81,7 +123,7 @@ const base = import.meta.env.BASE_URL;
     </nav>
 
     <main>
-      <slot /> 
+      <slot />
     </main>
   </body>
 </html>
