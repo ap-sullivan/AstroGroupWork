@@ -81,7 +81,7 @@ If you want to set up Astro in a container so nothing is installed locally, you 
 
 ![Image6](/AstroGroupWork/images/tutorial/25.jpg)
 
-In the search bar at the top of VS Code go to 'Show and Run Commands'.
+In the search bar at the top of VS Code go to <strong>'Show and Run Commands'.</strong>
 
 </section>
 
@@ -89,7 +89,7 @@ In the search bar at the top of VS Code go to 'Show and Run Commands'.
 
 ![Image7](/AstroGroupWork/images/tutorial/6.png)
 
-Click into 'Dev Containers:  Open Folder in Container' and select the folder on your local machine that the container will live.
+Click into <strong>'Dev Containers: Open Folder in Container'</strong> and select the folder on your local machine that the container will live.
 
 </section>
 
