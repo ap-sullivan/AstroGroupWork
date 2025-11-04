@@ -9,6 +9,11 @@ title: "Astro Tutorial"
 <div class="tutorial-headings">
 
 # Astro Introduction Tutorial
+
+This tutorial will walk you through both a local setup and a containerised setup of Astro and how React and Svelte work within the framework and its island architecture. It will also touch on Astro's file routing system.  
+
+The tutorial assumes you have a reasonable knowledge of the fundamentals of web development and larger code blocks can be copied directly into the code editor but always look at the code to see what it is doing.
+
 </div>
 
 <div class="tutorial-sub-headings" >
@@ -50,7 +55,7 @@ Once you have confirmed all the config options your project is initialised and y
 
 <section class="tutorial-section">
 
-![Image16](/AstroGroupWork/images/tutorial/16.png)
+![Image5](/AstroGroupWork/images/tutorial/16.png)
 
 You will then be able to open your project in a browser on the specified localhost.
 
@@ -58,7 +63,7 @@ You will then be able to open your project in a browser on the specified localho
 
 <section class="tutorial-section">
 
-![Image17](/AstroGroupWork/images/tutorial/17.png)
+![Image6](/AstroGroupWork/images/tutorial/17.png)
 
 Its a good idea to install the Astro plugin for VS code. This provides language support for .astro files as well as intellisense and syntax highlighting.
 
@@ -82,7 +87,7 @@ In the search bar at the top of VS Code go to 'Show and Run Commands'.
 
 <section class="tutorial-section">
 
-![Image6](/AstroGroupWork/images/tutorial/6.png)
+![Image7](/AstroGroupWork/images/tutorial/6.png)
 
 Click into 'Dev Containers:  Open Folder in Container' and select the folder on your local machine that the container will live.
 
@@ -98,7 +103,7 @@ Select Node and TypeScript (or JavaScript if you prefer) as the dev container en
 
 <section class="tutorial-section">
 
-![Image7](/AstroGroupWork/images/tutorial/7.png)
+![Image9](/AstroGroupWork/images/tutorial/7.png)
 
 Then select the version of node.js and linux. The default is bookworm-22 which means Node.js version 22 running on Debian Bookworm a stable version of Linux that Node uses. 
 
@@ -108,7 +113,7 @@ It will also ask if you want to install any additional features, but you can ski
 
 <section class="tutorial-section">
 
-![Image9](/AstroGroupWork/images/tutorial/27.jpg)
+![Image10](/AstroGroupWork/images/tutorial/27.jpg)
 
 After going through the setup you should be able to see a new container in the Docker desktop app.
 
@@ -116,7 +121,7 @@ After going through the setup you should be able to see a new container in the D
 
 <section class="tutorial-section">
 
-![Image10](/AstroGroupWork/images/tutorial/10.png)
+![Image11](/AstroGroupWork/images/tutorial/10.png)
 
 Now within the virtual container workspace you have created you can run the Astro install as per the steps set out in the <a href="#astroLocal">Setting Up Astro Locally</a> section.
 
@@ -125,7 +130,7 @@ Now within the virtual container workspace you have created you can run the Astr
 
 <section class="tutorial-section">
 
-![Image15](/AstroGroupWork/images/tutorial/15.png)
+![Image12](/AstroGroupWork/images/tutorial/15.png)
 
 Once you have the Astro project setup you need to run '<strong>npm run dev - - &nbsp; - -host 0.0.0.0</strong>', not just 'npm run dev', this ensures that the Astro files served from the container can be opened not just within the container but also on the local browser.
 
@@ -134,7 +139,7 @@ Once you have the Astro project setup you need to run '<strong>npm run dev - - &
 
 <section class="tutorial-section">
 
-![Image18](/AstroGroupWork/images/tutorial/28.jpg)
+![Image13](/AstroGroupWork/images/tutorial/28.jpg)
 
 We now have a basic folder structure to start working with Astro.
 
@@ -142,7 +147,7 @@ We now have a basic folder structure to start working with Astro.
 
 <section class="tutorial-section">
 
-![Image18](/AstroGroupWork/images/tutorial/29.jpg)
+![Image14](/AstroGroupWork/images/tutorial/29.jpg)
 
 
  If you look into the astro.index file code (located in pages)  you can get a basic understanding of how components are served to pages within an Astro project and its very similar to React or other frameworks.  A layout file with some basic CSS and html structure is imported as well as a component called “Welcome”. By placing the layout component on the page with the welcome component nested within it, the home page is rendered. 
@@ -162,18 +167,18 @@ One of Astro's main strengths is the ability to be able to use other franeworks 
 
 <section class="tutorial-section">
 
-![Image18](/AstroGroupWork/images/tutorial/30.jpg)
+![Image15](/AstroGroupWork/images/tutorial/30.jpg)
 
 In the command line run '<strong>npx astro add react</strong>' to install the relevant packages and dependencies needed to run react, and update the Astro config file. Double check the below has been added to the astro.config.mjs file:
 
-![Image18](/AstroGroupWork/images/tutorial/31.png)
+![Image16](/AstroGroupWork/images/tutorial/31.png)
 
 </section>
 
 <section class="tutorial-section">
 
 
-![Image18](/AstroGroupWork/images/tutorial/32.png)
+![Image17](/AstroGroupWork/images/tutorial/32.png)
 
 Now create a folder in the /src folder called data and within that a file called users.json, copy the below json into the file and save.
 
@@ -243,7 +248,7 @@ export default function UserList() {
 
 <section class="tutorial-section">
 
-![Image21](/AstroGroupWork/images/tutorial/34.jpg)
+![Image19](/AstroGroupWork/images/tutorial/34.jpg)
 
 Now create in your index.astro file import the UserList component at the top of the file, and then place the component on the page where you want the data to be rendered. 
 
@@ -255,7 +260,7 @@ Putting client:load within the component means the JavaScript "island" will be r
 
 
 
-![Image21](/AstroGroupWork/images/tutorial/35.jpg)
+![Image20](/AstroGroupWork/images/tutorial/35.jpg)
 
 The rendered page should look something like this (this screenshot has some CSS styling which is also imported to the index.astro file from a separate style sheet).
 
@@ -284,7 +289,7 @@ First of all you need to install svelte using the <strong>'npm install @astro/sv
 
 <section class="tutorial-section">
 
-![Image22](/AstroGroupWork/images/tutorial/36.jpg)
+![Image23](/AstroGroupWork/images/tutorial/36.jpg)
 
 Now create a component file (in the components folder) called Cocktails.svelte. and copy the code below into the component. This code sets up a fetch query to the cocktaildb API and maps the results as a list.
 
@@ -351,8 +356,8 @@ Now create a component file (in the components folder) called Cocktails.svelte. 
 <section class="tutorial-section">
 
 
-![Image23](/AstroGroupWork/images/tutorial/37.jpg)
-![Image23](/AstroGroupWork/images/tutorial/38.jpg)
+![Image24](/AstroGroupWork/images/tutorial/37.jpg)
+![Image25](/AstroGroupWork/images/tutorial/38.jpg)
 
 Back in index.astro, import the component at the top of the page, and then place the component below the react one that we added earlier.
 
@@ -360,7 +365,7 @@ Back in index.astro, import the component at the top of the page, and then place
 
 <section class="tutorial-section">
 
-![Image24](/AstroGroupWork/images/tutorial/39.jpg)
+![Image26](/AstroGroupWork/images/tutorial/39.jpg)
 
 Now when you reload the page both the react component pulling data from the local json file is rendered to the page, and below that the list of cocktails being fetched from an external API in a svelte component. Magic!
 
@@ -388,9 +393,9 @@ The last thing covered in this tutorial is an example of Astro's file routing sy
 
 
 
-![Image24](/AstroGroupWork/images/tutorial/41.jpg)
+![Image27](/AstroGroupWork/images/tutorial/41.jpg)
 
-Create a folder in src/pages called about.astro and add the below code
+Create a folder in src/pages called <strong>about.astro</strong> and add the below code
 
 
 
@@ -416,7 +421,7 @@ const pageTitle = "About";
 
 <section class="tutorial-section">
 
-![Image24](/AstroGroupWork/images/tutorial/40.jpg)
+![Image28](/AstroGroupWork/images/tutorial/40.jpg)
 
 Now in the browser add /about to the end of the localhost URL and the page should load. No separate routing definition required.
 
@@ -436,7 +441,7 @@ Where Astro really comes in useful for blogs and other sites that have heavily n
 
 <section class="tutorial-section">
 
-![Image24](/AstroGroupWork/images/tutorial/43.jpg)
+![Image29](/AstroGroupWork/images/tutorial/43.jpg)
 
 In the pages folder create a folder called blog and inside that folder create a file called <strong>[slug].astro</strong>. 
 
@@ -445,7 +450,7 @@ In the pages folder create a folder called blog and inside that folder create a 
 
 <section class="tutorial-section">
 
-![Image24](/AstroGroupWork/images/tutorial/44.jpg)
+![Image30](/AstroGroupWork/images/tutorial/44.jpg)
 
 Within the [slug].astro add the below code. This defines the pages that you want to use as paths (slugs).
 
@@ -479,7 +484,7 @@ const { slug } = Astro.params;
 <section class="tutorial-section">
 
 
-![Image24](/AstroGroupWork/images/tutorial/42.jpg)
+![Image31](/AstroGroupWork/images/tutorial/42.jpg)
 
 Now add the code below to your index.astro file and go to the home page and click each link and see what URL the browser uses for each link.
 <pre id="code">
@@ -497,7 +502,10 @@ Now add the code below to your index.astro file and go to the home page and clic
 
 <section class="tutorial-section">
 
-![Image24](/AstroGroupWork/images/tutorial/45.jpg)
+![Image32](/AstroGroupWork/images/tutorial/46.png)
+
+![Image33](/AstroGroupWork/images/tutorial/45.jpg)
+
 
 The URL's and titles should match the pre-defined parameters defined in the [slug].astro file (these parameters would come from a headless CMS or database and wouldn't be hardcoded in a real site with lots of content). 
 </section>
